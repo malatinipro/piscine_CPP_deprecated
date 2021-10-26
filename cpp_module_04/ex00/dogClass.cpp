@@ -21,7 +21,7 @@ Dog::~Dog()
 
 Dog &				Dog::operator=(Dog const &rhs)
 {
-  this->type = rhs.type;
+	Animal::operator=(rhs);
   return (*this);
 }
 

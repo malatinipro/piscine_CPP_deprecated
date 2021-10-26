@@ -86,4 +86,5 @@ int main(void)
     delete dog;
     std::cout << "--------------------" << std::endl;
   }
+  return (0);
 }

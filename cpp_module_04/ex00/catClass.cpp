@@ -22,7 +22,7 @@ Cat::~Cat()
 
 Cat &				Cat::operator=(Cat const &rhs )
 {
-  this->type = rhs.type;
+  Animal::operator=(rhs);
   return (*this);
 }
 

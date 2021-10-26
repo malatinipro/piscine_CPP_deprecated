@@ -24,7 +24,8 @@ Cat::~Cat(void)
 
 Cat &				Cat::operator=(Cat const &rhs )
 {
-  this->type = rhs.type;
+  Animal::operator=(rhs);
+  *_brain = *rhs._brain;
   return (*this);
 }
 

@@ -22,7 +22,7 @@ WrongDog::~WrongDog()
 
 WrongDog &				WrongDog::operator=(WrongDog const &rhs )
 {
-  this->type = rhs.type;
+  WrongAnimal::operator=(rhs);
   return (*this);
 }
 

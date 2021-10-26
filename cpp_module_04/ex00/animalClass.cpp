@@ -13,10 +13,10 @@ Animal::Animal(std::string arg_type)
 	return ;
 }
 
-Animal::Animal(const Animal & src)
+Animal::Animal(const Animal & src): type(src.type)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
-	*this = src;
+	//*this = src;
   return ;
 }
 

@@ -1,6 +1,6 @@
 NAME			=	ex01
 CC				=	clang++
-CFLAGS			=	-Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 RM				=	rm -rf
 SRCS			=	./main.cpp ./animalClass.cpp ./catClass.cpp ./dogClass.cpp \
 						./brainClass.cpp

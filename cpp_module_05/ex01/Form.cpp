@@ -1,4 +1,5 @@
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(void): _name("default_form"), _signed(false), _gexec(150), _gsign(150)
 {
@@ -31,31 +32,33 @@ Form::~Form(void)
 
 Form &				Form::operator=(Form const & rhs)
 {
+  (void)rhs;
   std::cout << "Form assignation operator called" << std::endl;
-  this->_name = rhs._name;
-  this->_signed = rhs._signed;
-  this->_gexec = rhs._gexec;
-  this->_gsign = rhs._gsign;
+  //this->_name = rhs._name;
+  //this->_signed = rhs._signed;
+  //this->_gexec = rhs._gexec;
+  //this->_gsign = rhs._gsign;
+  std::cout << "Not viable because values are consts." << std::endl;
 	return *this;
 }
 
 //Verifier  s il faut que ce soit const ou pas
-std::string &Form::getName(void)
+const std::string &Form::getName(void) const
 {
 	return (this->_name);
 }
 
-int &Form::getGsign(void)
+const int &Form::getGsign(void) const
 {
 	return (this->_gsign);
 }
 
-int &Form::getGexec(void)
+const int &Form::getGexec(void) const
 {
 	return (this->_gexec);
 }
 
-bool  Form::isSigned(void)
+bool  Form::isSigned(void) const
 {
 	return (this->_signed);
 }
@@ -69,17 +72,16 @@ void	Form::beSigned(Bureaucrat const &bur)
 		throw Form::FormAlreadySignedException();
 	else
 		this->_signed = true;
-  //Afficher message
   std::cout << "Form has been signed successfully" << std::endl;
 }
 
-std::ostream &			operator<<(std::ostream &COUT, Form &rhs)
+std::ostream &			operator<<( std::ostream & o, Form const & i)
 {
-	COUT << "Form " << rhs.getName() << "." << " Grade required form signature: " << rhs.getGsign();
-	COUT << ". Grade required for execution: " << rhs.getGexec() << ".";
-	if (rhs.isSigned())
-		COUT << " This form is signed.";
+	o << "Form " << i.getName() << "." << " Grade required form signature: " << i.getGsign();
+	o << ". Grade required for execution: " << i.getGexec() << ".";
+	if (i.isSigned())
+		o << " This form is signed.";
 	else
-		COUT << " This form is not signed yet.";
-	return COUT;
+		o << " This form is not signed yet.";
+	return o;
 }

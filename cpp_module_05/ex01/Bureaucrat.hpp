@@ -16,10 +16,10 @@ public:
   Bureaucrat(std::string const name, int grade);
   virtual ~Bureaucrat(void);
 
-  Bureaucrat &	operator=(Bureaucrat const & rhs);
-  std::string	getName(void) const;
-  int         getGrade(void) const;
-  void			signForm(Form &form);
+  Bureaucrat &	   operator=(Bureaucrat const & rhs);
+  std::string	    getName(void) const;
+  int             getGrade(void) const;
+  void			      signForm(Form &form);
 
 private:
   const std::string _name;

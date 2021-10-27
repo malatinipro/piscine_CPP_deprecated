@@ -20,8 +20,6 @@ Form::Form(std::string name, int gsign, int gexec): _name(name), _signed(false),
 		throw Form::GradeTooHighException();
 	if (this->_gexec > 150 || this->_gsign > 150)
 		throw Form::GradeTooLowException();
-  //Rajouter l affichage
-  //std::cout << "Form is called " <<  std::endl;
 }
 
 Form::~Form(void)
@@ -34,15 +32,10 @@ Form &				Form::operator=(Form const & rhs)
 {
   (void)rhs;
   std::cout << "Form assignation operator called" << std::endl;
-  //this->_name = rhs._name;
-  //this->_signed = rhs._signed;
-  //this->_gexec = rhs._gexec;
-  //this->_gsign = rhs._gsign;
   std::cout << "Not viable because values are consts." << std::endl;
 	return *this;
 }
 
-//Verifier  s il faut que ce soit const ou pas
 const std::string &Form::getName(void) const
 {
 	return (this->_name);
@@ -77,10 +70,10 @@ void	Form::beSigned(Bureaucrat const &bur)
 
 std::ostream &			operator<<( std::ostream & o, Form const & i)
 {
-	o << "Form " << i.getName() << "." << " Grade required form signature: " << i.getGsign();
+	o << "Form " << i.getName() << "." << " Grade required for signature: " << i.getGsign();
 	o << ". Grade required for execution: " << i.getGexec() << ".";
 	if (i.isSigned())
-		o << " This form is signed.";
+		o << " This form is signed !";
 	else
 		o << " This form is not signed yet.";
 	return o;

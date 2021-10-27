@@ -51,11 +51,11 @@ void	Bureaucrat::signForm(Form &form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << this->_name << " is not allowed " << form.getName() << ": ";
+		std::cerr << this->_name << " cannot sign because ";
 		std::cerr << e.what() << std::endl;
 		return ;
 	}
-	std::cout << this->_name << " signed " << form.getName() << std::endl;
+	std::cout << this->_name << " signes " << form.getName() << std::endl;
 }
 
 std::string	Bureaucrat::getName(void) const

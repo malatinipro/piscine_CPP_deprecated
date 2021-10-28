@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include <climits>
-//#include <math.h>
+#include <cmath>
 #include <iomanip>
 #include <cerrno>
 
@@ -10,22 +10,15 @@ bool	is_int(std::string const & str);
 bool	is_float(std::string const & str);
 bool	is_double(std::string const & str);
 
-/*
-** static cast d'un char vers autres types
-*/
 void display_char(std::string const &str)
 {
-  //std::cout << "char display function called" << std::endl;
   char c = str[0];
   std::cout << "char: " << c << std::endl;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
-	std::cout << "float: " << std::setprecision(6) << static_cast<float>(c) << std::endl;//<< ".0f"
-	std::cout << "double: " << std::setprecision(6) << static_cast<double>(c) << std::endl; //".0"
+	std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;//<< ".0f"
+	std::cout << "double: " << static_cast<double>(c) << ".0" << std::endl; //".0"
 }
 
-/*
-** Static cast d'un int vers autres types
-*/
 bool display_int(std::string const &str)
 {
   //std::cout << "int display function called" << std::endl;
@@ -41,10 +34,9 @@ bool display_int(std::string const &str)
 	}
 	i = atoi(str.data());
 	if (i > CHAR_MAX || i < CHAR_MIN)
-		std::cout << "char: impossible" << std::endl;
-  //Si n 'est pas ascii
+		std::cout << "char: not ascii" << std::endl;
   else if (!isprint(static_cast<char>(i)))
-  	std::cout << "char: Non displayable" << std::endl;
+  	std::cout << "char: not printable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(i) << std::endl;
 	std::cout << "int: " << i << std::endl;
@@ -53,24 +45,19 @@ bool display_int(std::string const &str)
 	return (true);
 }
 
-/*
-** Static cast d'un float vers autres types
-*/
 bool	display_float(std::string const & str)
 {
   std::cout << "float display function called" << std::endl;
   if (str == "nanf" || str == "+inff" || str == "-inff")
   {
-    std::cout << "char: impossible" << std::endl;
-    std::cout << "int: impossible" << std::endl;
+    std::cout << "char: not ascii" << std::endl;
+    std::cout << "int: out of range" << std::endl;
     std::cout << "float: " << std::setprecision(6) << str << std::endl;
     std::cout << "double: " << std::setprecision(6) << str.substr(0, str.length() - 1) << std::endl;
     return (true);
   }
-  //permet de convertir en double cette fois
 	double	d = strtod(str.data(), NULL);
 	float	f;
-  //Si strtod renvoie une erreur
 	(void)d;
 	if (errno == ERANGE)
 	{
@@ -80,17 +67,26 @@ bool	display_float(std::string const & str)
   //conversion en float
 	f = atof(str.data());
 	if (static_cast<int>(f) > CHAR_MAX || static_cast<int>(f) < CHAR_MIN)
-		std::cout << "char: impossible" << std::endl;
+		std::cout << "char: not ascii" << std::endl;
   else if (!isprint(static_cast<char>(f)))
-    std::cout << "char: Non displayable" << std::endl;
+    std::cout << "char: not printable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(f) << std::endl;
 	if (static_cast<long>(f) > INT_MAX || static_cast<long>(f) < INT_MIN)
-		std::cout << "int: impossible" << std::endl;
+		std::cout << "int: out of range" << std::endl;
 	else
 		std::cout << "int: " << static_cast<int>(f) << std::endl;
-	std::cout << "float: " << std::setprecision(6) << f << std::endl;
-	std::cout << "double: " << std::setprecision(6) << static_cast<double>(f) << std::endl;
+  //Check de la precision
+  if (fmod(f, 1))
+  {
+  	std::cout << "float: " << f << "f" << std::endl;
+  	std::cout << "double: " << static_cast<double>(f) << std::endl;
+  }
+  else
+  {
+  	std::cout << "float: " << f << ".0f" << std::endl;
+  	std::cout << "double: " << static_cast<double>(f) << ".0" << std::endl;
+  }
 	return (true);
 }
 
@@ -113,17 +109,25 @@ bool	display_double(std::string const & str)
 		return (false);
 	}
 	if (static_cast<int>(d) > CHAR_MAX || static_cast<int>(d) < CHAR_MIN)
-		std::cout << "char: impossible" << std::endl;
+		std::cout << "char: not ascii" << std::endl;
   else if (!isprint(static_cast<char>(d)))
-    std::cout << "char: Non displayable" << std::endl;
+    std::cout << "char: not printable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(d) << std::endl;
 	if (static_cast<long>(d) > INT_MAX || static_cast<long>(d) < INT_MIN)
-		std::cout << "int: impossible" << std::endl;
+		std::cout << "int: out of range" << std::endl;
 	else
 		std::cout << "int: " << static_cast<int>(d) << std::endl;
-		std::cout << "float: " << std::setprecision(6) << static_cast<float>(d) << std::endl;
-		std::cout << "double: " << std::setprecision(6) << std::endl;
+  if (fmod(d, 1))
+  {
+  	std::cout << "float: " << d << "f" << std::endl;
+  	std::cout << "double: " << static_cast<double>(d) << std::endl;
+  }
+  else
+  {
+  	std::cout << "float: " << d << ".0f" << std::endl;
+  	std::cout << "double: " << static_cast<double>(d) << ".0" << std::endl;
+  }
 	return (true);
 }
 

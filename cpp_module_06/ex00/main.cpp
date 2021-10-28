@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <cmath>
 
 //checker sur Linux
 #define ERROR 1

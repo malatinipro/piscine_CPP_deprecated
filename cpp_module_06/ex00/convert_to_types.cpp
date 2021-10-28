@@ -15,7 +15,7 @@ bool	is_double(std::string const & str);
 */
 void display_char(std::string const &str)
 {
-  std::cout << "char display function called" << std::endl;
+  //std::cout << "char display function called" << std::endl;
   char c = str[0];
   std::cout << "char: " << c << std::endl;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
@@ -28,7 +28,7 @@ void display_char(std::string const &str)
 */
 bool display_int(std::string const &str)
 {
-  std::cout << "int display function called" << std::endl;
+  //std::cout << "int display function called" << std::endl;
   //strtol converts string to long integer
   //data va permettre de convertir la string en char * (tableau)
 	long int	l = strtol(str.data(), NULL, 10);
@@ -42,6 +42,9 @@ bool display_int(std::string const &str)
 	i = atoi(str.data());
 	if (i > CHAR_MAX || i < CHAR_MIN)
 		std::cout << "char: impossible" << std::endl;
+  //Si n 'est pas ascii
+  else if (!isprint(static_cast<char>(i)))
+  	std::cout << "char: Non displayable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(i) << std::endl;
 	std::cout << "int: " << i << std::endl;
@@ -78,6 +81,8 @@ bool	display_float(std::string const & str)
 	f = atof(str.data());
 	if (static_cast<int>(f) > CHAR_MAX || static_cast<int>(f) < CHAR_MIN)
 		std::cout << "char: impossible" << std::endl;
+  else if (!isprint(static_cast<char>(f)))
+    std::cout << "char: Non displayable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(f) << std::endl;
 	if (static_cast<long>(f) > INT_MAX || static_cast<long>(f) < INT_MIN)
@@ -109,6 +114,8 @@ bool	display_double(std::string const & str)
 	}
 	if (static_cast<int>(d) > CHAR_MAX || static_cast<int>(d) < CHAR_MIN)
 		std::cout << "char: impossible" << std::endl;
+  else if (!isprint(static_cast<char>(d)))
+    std::cout << "char: Non displayable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(d) << std::endl;
 	if (static_cast<long>(d) > INT_MAX || static_cast<long>(d) < INT_MIN)

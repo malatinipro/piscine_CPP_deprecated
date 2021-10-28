@@ -27,13 +27,14 @@ bool  is_int(std::string const &str)
   while (i < len)
   {
     if (str[i] == '-' && i != 0)
-      return (false);
+        return (false);
     if (!isprint(str[i]))
       return (false);
-    if (!isdigit(str[i]))
+    if (!isdigit(str[i]) && i != 0)
       return (false);
     i++;
   }
+  //std::cout << "The int is correct" << std::endl;
   return (true);
 }
 

@@ -30,33 +30,34 @@ int main(void)
   std::stack<int> s(mstack);
   std::cout << "----------------------------" << std::endl;
   std::cout << "-------  EXTRA TESTS -------" << std::endl;
-  //std::list<int> l = reinterpret_cast<std::list<int>>(l(s));
-  //Est-ce qu'il faudrait caster la stack en list pour que ce soit ok ?
-  //Comparing a list as asked in the subject
-  /*
-  std::list<int> listOfInts;
-  std::cout << "We just declared a list" << std::endl;
-  std::cout << "Let's add the same numbers and compare it" << std::endl;
-  listOfInts.push_back(5);
-  listOfInts.push_back(17);
-  std::cout << listOfInts.begin() << std::endl;
-  listOfInts.pop();
-  std::cout << listOfInts.size() << std::endl;
-  listOfInts.push_back(3);
-  listOfInts.push_back(5);
-  listOfInts.push_back(737);
-  listOfInts.push_back(0);
-  typedef typename std::stack<T>::container_type::iterator my_iterator;
-  my_iterator it2 = listOfInts.begin();
-  my_iterator it3 = listOfInts.end();
-  ++it2;
-  --it2;
-  while (it2 != it3)
+  std::cout << "----------------------------" << std::endl;
+  //https://www.cplusplus.com/reference/stack/stack/
+  std::cout << "We are now doing some tests on the stack that have been copied from the Mutant Stack" << std::endl;
+  std::cout << "----------------------------" << std::endl;
+  std::cout << "Let's call other functions/methods that we can use on a stack !" << std::endl;
+  std::cout << "----------------------------" << std::endl;
+  std::cout << "Is it empty ? " << s.empty() << std::endl;
+  std::cout << "----------------------------" << std::endl;
+  std::cout << "What is the size ? " << s.size() << std::endl;
+   std::cout << "----------------------------" << std::endl;
+  s.push(5);
+  s.push(6);
+   std::cout << "----------------------------" << std::endl;
+  std::cout << "We learned that stack does not expose iterators on internet." << std::endl;
+   std::cout << "----------------------------" << std::endl;
+  s.pop();
+  s.pop();
+  std::cout << "The top of our stack is " << s.top() << std::endl;
+  std::cout << "----------------------------" << std::endl;
+  std::cout << "Let's pop everything one by one" << std::endl;
+  while (!s.empty())
   {
-  std::cout << *it2 << std::endl;
-  ++it2;
-  }
+    std::cout << ' ' << s.top();
+    s.pop();
+	}
+  std::cout << std::endl;
+  std::cout << "----------------------------" << std::endl;
+  std::cout << "Is it empty now ? " << s.empty() << std::endl;
   std::cout << "----------------------------" << std::endl;
   return (0);
-  */
 }

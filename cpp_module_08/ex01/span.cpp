@@ -59,13 +59,6 @@ unsigned int Span::longestSpan(void) const
 	return (*std::max_element(this->_numbers.begin(), this->_numbers.end()) - *std::min_element(this->_numbers.begin(), this->_numbers.end()));
 }
 
-/*
-int		Span::operator[](std::vector<int> it)
-{
-  return (this[*it]);
-}
-*/
-
 //On va pouvoir afficher le vector qui se trouve a l interieur de notre span
 void Span::display(void) const
 {
@@ -73,7 +66,6 @@ void Span::display(void) const
     {
       std::cout << *it << std::endl;
     }
-    std::cout << std::endl;
 }
 
 //Fonction pour afficher un vecteur (simple)
@@ -88,35 +80,23 @@ void display_vector(std::vector<int> &v)
 unsigned int Span::shortestSpan(void) const
 {
 	if (this->_numbers.size() < 2)
-		throw (std::runtime_error(std::string("There is not span to find. ")));
+		throw (std::runtime_error(std::string("There is no span to find. ")));
   /*
   ** Pour trouver le plus petit span on a besoin de trier le vector
   ** pour ca on va trier une copie
   */
 	std::vector<int> to_sort(this->_numbers);
-  std::cout << "-------------------------------" << std::endl;
-  std::cout << "Let's see the current collection" << std::endl;
-  std::cout << "-------------------------------" << std::endl;
-  this->display();
-  std::cout << "-------------------------------" << std::endl;
-	std::sort(to_sort.begin(), to_sort.end());
-
-  //La on peut voir que notre vecteur a bien ete trie
-  std::cout << "-------------------------------" << std::endl;
-  std::cout << "Let's see the collection now sorted" << std::endl;
-  std::cout << "-------------------------------" << std::endl;
-  display_vector(to_sort);
-  std::cout << "-------------------------------" << std::endl;
-  std::cout << "Let's find the shorted span" << std::endl;
-
-  //Pour se faire (joliment), on va utiliser un iterator
-  //Maintenant il faut le parcourir pour trouver le plus petit ecart
-  /*
-	for (unsigned long i = 0; i < this->_numbers.size() - 1; i++)
-		tosort[i] = tosort[i+1] - tosort[i];
-	return (*std::min_element(tosort.begin(), tosort.end() - 1));
-  */
-  return (0);
+  //https://www.cplusplus.com/reference/algorithm/min_element/
+  long span = abs(_numbers[0] - _numbers[1]);
+	for (std::vector<int>::const_iterator it = _numbers.begin(); it != _numbers.end(); it++)
+  {
+		for (std::vector<int>::const_iterator jt = it + 1; jt != _numbers.end(); jt++)
+    {
+			if (span > static_cast<long>(abs(*it - *jt)))
+				span = static_cast<long>(abs(*it - *jt));
+		}
+	}
+  return (span);
 }
 
 std::ostream & operator<<(std::ostream &o, Span const &rhs)

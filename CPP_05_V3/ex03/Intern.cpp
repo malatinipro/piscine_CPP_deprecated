@@ -37,35 +37,38 @@ Form * Intern::makeForm(std::string name, std::string target)
 	Form * src[3] = {new ShrubberyCreationForm(target), new RobotomyRequestForm(target), new PresidentialPardonForm(target)};
 
   int i = 0;
-	int check = 0;
+  int check = -1;
   std::string form_to_create;
   while (i < 3)
   {
     if (forms[i] == name)
     {
       form_to_create = forms[i];
-			check = i;
+	  check = i;
+	  std::cout << "We found it" << std::endl;
       break;
     }
     i++;
     //checker si le forme name existe bien
   }
-	if (i == 3)
-	{
+  i = 0;
+  while (i < 3)
+  {
+	  if (i != check)
+	  {
+		delete src[i];
+	  }
+	  i++;
+  }
+  if (check == -1)
+  {
 		//Le form n a pas ete trouve
-		throw std::runtime_error(std::string("Error. Form mentionned does not exist, the intern can not create it."));
-		return (NULL);
-	}
-	i = 0;
-	while (i < 3)
-	{
-		if (i != check)
-		{
-			delete src[i];
-		}
-		i++;
-	}
-	//Ok
+    throw std::runtime_error(std::string("Error. Form mentionned does not exist, the intern can not create it."));
+  }
+  if (check != -1)
+  {
 	std::cout << "Inter creates " << name << std::endl;
-	return NULL;
+    return (src[check]);
+  }
+  return (NULL);
 }

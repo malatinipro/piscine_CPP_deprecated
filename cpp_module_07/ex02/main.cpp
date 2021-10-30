@@ -64,5 +64,8 @@ int main(void)
     std::cout << e.what() << std::endl;
   }
   std::cout << "-----------------------------------" << std::endl;
+  std::cout << "---------- EXTRA TESTS -----------" << std::endl;
+  std::cout << "Creating an empty array" << std::endl;
+  Array <int> empty;
   return (0);
 }

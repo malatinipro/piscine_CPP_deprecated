@@ -20,7 +20,11 @@ public:
   unsigned int      longestSpan(void) const;
 
   //accessors
-  unsigned int      getN(void)const; 
+  unsigned int      getN(void)const;
+  //ajout perso
+  void              display(void) const;
+  //to do
+  //int operator[](std::vector<int> it);
 
 private:
   unsigned int      _N;

@@ -59,13 +59,30 @@ unsigned int Span::longestSpan(void) const
 	return (*std::max_element(this->_numbers.begin(), this->_numbers.end()) - *std::min_element(this->_numbers.begin(), this->_numbers.end()));
 }
 
-void display(std::vector<int> &v)
+/*
+int		Span::operator[](std::vector<int> it)
 {
-    for(size_t i = 0; i<v.size(); i++)
+  return (this[*it]);
+}
+*/
+
+//On va pouvoir afficher le vector qui se trouve a l interieur de notre span
+void Span::display(void) const
+{
+    for (std::vector<int>::const_iterator it = this->_numbers.begin(); it != this->_numbers.end(); it++)
     {
-        std::cout << v[i] << " ";
+      std::cout << *it << std::endl;
     }
-    std::cout << "\n" << std::endl;
+    std::cout << std::endl;
+}
+
+//Fonction pour afficher un vecteur (simple)
+void display_vector(std::vector<int> &v)
+{
+  for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
+  {
+    std::cout << *it << std::endl;
+  }
 }
 
 unsigned int Span::shortestSpan(void) const
@@ -76,10 +93,24 @@ unsigned int Span::shortestSpan(void) const
   ** Pour trouver le plus petit span on a besoin de trier le vector
   ** pour ca on va trier une copie
   */
-	std::vector<int> to_sort = this->_numbers;
+	std::vector<int> to_sort(this->_numbers);
+  std::cout << "-------------------------------" << std::endl;
+  std::cout << "Let's see the current collection" << std::endl;
+  std::cout << "-------------------------------" << std::endl;
+  this->display();
+  std::cout << "-------------------------------" << std::endl;
 	std::sort(to_sort.begin(), to_sort.end());
 
-  display(to_sort);
+  //La on peut voir que notre vecteur a bien ete trie
+  std::cout << "-------------------------------" << std::endl;
+  std::cout << "Let's see the collection now sorted" << std::endl;
+  std::cout << "-------------------------------" << std::endl;
+  display_vector(to_sort);
+  std::cout << "-------------------------------" << std::endl;
+  std::cout << "Let's find the shorted span" << std::endl;
+
+  //Pour se faire (joliment), on va utiliser un iterator
+  //Maintenant il faut le parcourir pour trouver le plus petit ecart
   /*
 	for (unsigned long i = 0; i < this->_numbers.size() - 1; i++)
 		tosort[i] = tosort[i+1] - tosort[i];

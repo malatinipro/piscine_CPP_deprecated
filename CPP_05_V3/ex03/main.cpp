@@ -9,77 +9,46 @@ std::ostream &			operator<<(std::ostream &COUT, Form const &rhs);
 
 int main(void)
 {
+  std::cout << "Let's instanciate a Form and an Intern" << std::endl;
+  Intern someRandomIntern;
+  Form* rrf;
   {
-    std::cout << "---------------------------" << std::endl;
-    std::cout << "Test avec un top bureaucrat" << std::endl;
-    std::cout << "---------------------------" << std::endl;
-    Bureaucrat top("CEO", 1);
-    {
-      std::cout << "------ SHRUBERRY ------" << std::endl;
-      ShrubberyCreationForm shrub("test target");
-      std::cout << "--- signing ---" << std::endl;
-      top.signForm(shrub);
-      std::cout << "--- executing ---" << std::endl;
-      top.executeForm(shrub);
-      std::cout << "-----------------------" << std::endl;
+    std::cout << "---------------" << std::endl;
+    std::cout << "Mandatory tests" << std::endl;
+    std::cout << "---------------" << std::endl;
 
-    }
-    {
-      std::cout << "------ PRESIDENTIAL ------" << std::endl;
-      PresidentialPardonForm pres("test2 target");
-      std::cout << "--- signing ---" << std::endl;
-      //pres.beSigned(top);
-      top.signForm(pres);
-      std::cout << "--- executing ---" << std::endl;
-      top.executeForm(pres);
-      std::cout << "-----------------------" << std::endl;
-    }
-    {
-      std::cout << "------ ROBOTOMY ------" << std::endl;
-      RobotomyRequestForm req("test3 target");
-      std::cout << "--- signing ---" << std::endl;
-      top.signForm(req);
-      std::cout << "--- executing ---" << std::endl;
-      top.executeForm(req);
-      std::cout << "-----------------------" << std::endl;
-    }
-    std::cout << "--- DESTRUCTORS ----" << std::endl;
+
+    std::cout << "The args are 'robotomy request' and 'Bender'" << std::endl;
+    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+    /* Tests supplementaires */
+    std::cout << "---------------" << std::endl;
   }
-  std::cout << std::endl;
-  std::cout << "-----------------------" << std::endl;
+  std::cout << "------ EXTRA TESTS ------" << std::endl;
   {
-    std::cout << "Test avec un low bureaucrat" << std::endl;
-    std::cout << "-----------------------" << std::endl;
-    Bureaucrat low("Low", 46);
+    std::cout << "The args are 'shrubbery creation' and 'Target'" << std::endl;
+    std::string s1 = "shrubbery creation";
+    std::cout << "--------------" << std::endl;
+    try
     {
-      std::cout << "------ SHRUBERRY ------" << std::endl;
-      ShrubberyCreationForm shrub("test target");
-      std::cout << "--- signing ---" << std::endl;
-      low.signForm(shrub);
-      std::cout << "--- executing ---" << std::endl;
-      low.executeForm(shrub);
-      std::cout << "-----------------------" << std::endl;
-
+      rrf =  someRandomIntern.makeForm(s1, "Target");
     }
+    catch (std::exception &e)
     {
-      std::cout << "------ PRESIDENTIAL ------" << std::endl;
-      PresidentialPardonForm pres("test2 target");
-      std::cout << "--- signing ---" << std::endl;
-      low.signForm(pres);
-      std::cout << "--- executing ---" << std::endl;
-      low.executeForm(pres);
-      std::cout << "-----------------------" << std::endl;
+      std::cout << e.what() << std::endl;
     }
+    std::cout << "--------------" << std::endl;
+    std::cout << "The args are 'does not exist form' and 'Target'" << std::endl;
+    std::string s2 = "does not exist form";
+    std::cout << "--------------" << std::endl;
+    try
     {
-      std::cout << "------ ROBOTOMY ------" << std::endl;
-      RobotomyRequestForm req("test3 target");
-      std::cout << "--- signing ---" << std::endl;
-      low.signForm(req);
-      std::cout << "--- executing ---" << std::endl;
-      low.executeForm(req);
-      std::cout << "-----------------------" << std::endl;
+      rrf =  someRandomIntern.makeForm(s2, "Target");
     }
-    std::cout << "--- DESTRUCTORS ----" << std::endl;
+    catch (std::exception &e)
+    {
+      std::cout << e.what() << std::endl;
+    }
   }
+  std::cout << "--------------" << std::endl;
   return (0);
 }

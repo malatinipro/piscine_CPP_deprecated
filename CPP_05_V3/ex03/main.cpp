@@ -23,6 +23,7 @@ int main(void)
     /* Tests supplementaires */
     std::cout << "---------------" << std::endl;
   }
+  delete rrf;
   std::cout << "------ EXTRA TESTS ------" << std::endl;
   {
     std::cout << "The args are 'shrubbery creation' and 'Target'" << std::endl;
@@ -40,6 +41,7 @@ int main(void)
     std::cout << "The args are 'does not exist form' and 'Target'" << std::endl;
     std::string s2 = "does not exist form";
     std::cout << "--------------" << std::endl;
+    delete rrf;
     try
     {
       rrf =  someRandomIntern.makeForm(s2, "Target");
@@ -50,5 +52,6 @@ int main(void)
     }
   }
   std::cout << "--------------" << std::endl;
+  delete rrf;
   return (0);
 }

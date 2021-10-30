@@ -16,6 +16,7 @@ public:
 
   //store a single number
   void	            addNumber(int const nb);
+  void              addRangeNumber(int a, int b);
   unsigned int      shortestSpan(void) const;
   unsigned int      longestSpan(void) const;
 

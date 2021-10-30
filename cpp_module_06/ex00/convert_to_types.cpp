@@ -14,15 +14,6 @@ bool	is_double(std::string const & str);
 void display_char(std::string const &str)
 {
   char c = str[0];
-  /* Le checks prealables suffisent
-  int len = str.length();
-  std::cout << "The len is " << len << std::endl;
-  if (len != 1)
-  {
-    std::cout << "Error. The len is incorrect" << std::endl;
-    return ;
-  }
-  */
   std::cout << "char: " << c << std::endl;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
 	std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;//<< ".0f"
@@ -57,8 +48,12 @@ bool display_int(std::string const &str)
 
 bool	display_float(std::string const & str)
 {
-  std::cout << "float display function called" << std::endl;
-  if (str == "nanf" || str == "+inff" || str == "-inff")
+  const std::string s1 = "nanf";
+  const std::string s2 = "+inff";
+  const std::string s3 = "-inff";
+
+  //std::cout << "float display function called" << std::endl;
+  if (str == s1 || str == s2 || str == s3)
   {
     std::cout << "char: not ascii" << std::endl;
     std::cout << "int: out of range" << std::endl;
@@ -66,15 +61,7 @@ bool	display_float(std::string const & str)
     std::cout << "double: " << std::setprecision(6) << str.substr(0, str.length() - 1) << std::endl;
     return (true);
   }
-  //A reprendre
-  int len = str.length();
-  int i = 0;
-  while (i < )
-  if (isalpha(str) && !(str == "nanf" || str == "+inff" || str == "-inff"))
-  {
-    std::cout << "Error. Bad argument." << std::endl;
-    return ;
-  }
+  //Attention checker
 	double	d = strtod(str.data(), NULL);
 	float	f;
 	(void)d;
@@ -111,8 +98,12 @@ bool	display_float(std::string const & str)
 
 bool	display_double(std::string const & str)
 {
-  std::cout << "double display function called" << std::endl;
-  if (str == "nan" || str == "+inf" || str == "-inf")
+  const std::string s1 = "nan";
+  const std::string s2 = "+inf";
+  const std::string s3 = "-inf";
+
+  //std::cout << "double display function called" << std::endl;
+  if (str == s1 || str == s2 || str == s2)
   {
     std::cout << "char: impossible" << std::endl;
     std::cout << "int: impossible" << std::endl;
@@ -157,20 +148,24 @@ bool  convert_to_types(std::string const &str)
     display_char(str);
     return (true);
   }
-  if (is_int(str))
+  else if (is_int(str))
   {
     display_int(str);
     return (true);
   }
-  if (is_float(str))
+  else if (is_float(str))
   {
     display_float(str);
     return (true);
   }
-  if (is_double(str))
+  else if (is_double(str))
   {
     display_double(str);
     return (true);
+  }
+  else
+  {
+    std::cout << "Error. Bad argument" << std::endl;
   }
   return (false);
 }

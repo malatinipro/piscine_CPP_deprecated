@@ -19,6 +19,7 @@ int main(int argc, char **argv)
   }
   //checker qu'il n'y a pas de pb sur Linux
   arg = argv[1];
+  //std::cout << "arg is " << arg << std::endl;
   if (arg.empty())
   {
     std::cerr << "Error: the string arg is empty." << std::endl;

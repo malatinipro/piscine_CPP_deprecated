@@ -4,6 +4,7 @@
 #include <cmath>
 #include <iomanip>
 #include <cerrno>
+#include <string>
 
 bool	is_char(std::string const & str);
 bool	is_int(std::string const & str);
@@ -13,6 +14,15 @@ bool	is_double(std::string const & str);
 void display_char(std::string const &str)
 {
   char c = str[0];
+  /* Le checks prealables suffisent
+  int len = str.length();
+  std::cout << "The len is " << len << std::endl;
+  if (len != 1)
+  {
+    std::cout << "Error. The len is incorrect" << std::endl;
+    return ;
+  }
+  */
   std::cout << "char: " << c << std::endl;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
 	std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;//<< ".0f"
@@ -55,6 +65,15 @@ bool	display_float(std::string const & str)
     std::cout << "float: " << std::setprecision(6) << str << std::endl;
     std::cout << "double: " << std::setprecision(6) << str.substr(0, str.length() - 1) << std::endl;
     return (true);
+  }
+  //A reprendre
+  int len = str.length();
+  int i = 0;
+  while (i < )
+  if (isalpha(str) && !(str == "nanf" || str == "+inff" || str == "-inff"))
+  {
+    std::cout << "Error. Bad argument." << std::endl;
+    return ;
   }
 	double	d = strtod(str.data(), NULL);
 	float	f;

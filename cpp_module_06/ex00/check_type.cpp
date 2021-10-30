@@ -117,12 +117,26 @@ bool is_double(std::string const &str)
 int  check_type(std::string const &str)
 {
   if (is_char(str) == true)
+  {
+    //std::cout << "Is char returned true" << std::endl;
     return (1);
-  if (is_int(str) == true)
+  }
+
+  else if (is_int(str) == true)
+  {
+    //std::cout << "Is int returned true" << std::endl;
     return (2);
-  if (is_float(str) == true)
+  }
+  else if (is_float(str) == true)
+  {
+    //std::cout << "Is float returned true" << std::endl;
     return (3);
-  if (is_double(str) == true)
+  }
+  else if (is_double(str) == true)
+  {
+    //std::cout << "Is double returned true" << std::endl;
     return (4);
+  }
+  //std::cout << "Error: incorrect type argument" << std::endl;
   return (0);
 }

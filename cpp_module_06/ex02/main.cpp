@@ -28,7 +28,7 @@ Base * generate(void)
 	}
   else
 	{
-		std::cout << "Rand made us create a B instance" << std::endl;
+		std::cout << "Rand made us create a C instance" << std::endl;
 		base_ptr = new C;
 	}
   return (base_ptr);

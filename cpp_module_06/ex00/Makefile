@@ -1,8 +1,8 @@
 NAME			=	ex00
-CC				=	clang++
+CC				=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 RM				=	rm -rf
-SRCS			=	./main.cpp ./check_type.cpp ./convert_to_types.cpp 
+SRCS			=	./main.cpp ./check_type.cpp ./convert_to_types.cpp
 OBJS 			=	${SRCS:.cpp=.o}
 
 .cpp.o:

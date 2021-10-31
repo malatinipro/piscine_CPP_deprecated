@@ -11,10 +11,8 @@ template<typename T>
 class Array
 {
 public:
-  //Constructeur sans paramettre
   //cree un empty array
   Array(): _arr(NULL), _size(0) {;}
-  //Constructeur avec paramettre
   //https://en.cppreference.com/w/cpp/language/default_initialization
   Array(unsigned int n): _arr(new T[n]), _size(n) {;}
   //Constructeur par copie
@@ -24,15 +22,14 @@ public:
     this->_size = src._size;
     this->_arr = new T[this->_size];
     //initialisation par defaut
-    int i = 0;
+    unsigned int i = 0;
     while (i < this->_size)
     {
-      this->arr[i] = src._arr[i];
+      this->_arr[i] = src._arr[i];
       i++;
     }
-    return (*this);
   }
-    //Destructeur
+   //Destructeur
   ~Array()
   {
     if (this->_arr)
@@ -56,6 +53,7 @@ public:
     }
     return (*this);
   }
+
   //Surcharge d'operateur demandé dans le sujet
   T &operator[](unsigned int const &index)
   {

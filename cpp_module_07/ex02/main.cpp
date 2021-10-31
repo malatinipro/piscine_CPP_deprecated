@@ -47,6 +47,7 @@ int main(void)
     std::cout << src[i] << std::endl;
     i++;
   }
+  std::cout << "--------------------------------------" << std::endl;
   std::cout << "Accessing the values using operator []" << std::endl;
   i = 0;
   while (i < 3)
@@ -54,7 +55,7 @@ int main(void)
     std::cout << tab[i] << std::endl;
     i++;
   }
-  std::cout << "Testing if we go out of range" << std::endl;
+  std::cout << "Testing if we go out of range/limits" << std::endl;
   try
   {
     std::cout << tab[10] << std::endl;
@@ -63,9 +64,15 @@ int main(void)
   {
     std::cout << e.what() << std::endl;
   }
-  std::cout << "-----------------------------------" << std::endl;
-  std::cout << "---------- EXTRA TESTS -----------" << std::endl;
-  std::cout << "Creating an empty array" << std::endl;
+  std::cout << "------------------------------------" << std::endl;
+  std::cout << "Creating an empty array --silently" << std::endl;
   Array <int> empty;
+  std::cout << "------------------------------------" << std::endl;
+  std::cout << "Copying the one of the array --silently" << std::endl;
+  Array <std::string> copy(str);
+  std::cout << "-------------------------------------" << std::endl;
+  std::cout << "Testing a const Array> << std::endl;
+  //a continuer
+  //const Array <int> i(3) = {};
   return (0);
 }

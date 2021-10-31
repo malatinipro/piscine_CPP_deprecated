@@ -65,6 +65,16 @@ public:
       return (this->_arr[index]);
   }
 
+  T &operator[](unsigned int const &index) const
+  {
+    if (index >= this->_size)
+      //https://newbedev.com/how-to-throw-std-exceptions-with-variable-messages
+      //https://stackoverflow.com/questions/12261915/how-to-throw-stdexceptions-with-variable-messages
+      throw std::runtime_error(std::string("Out of range !"));
+    else
+      return (this->_arr[index]);
+  }
+
 private:
   T             *_arr;
   unsigned int  _size;

@@ -71,8 +71,16 @@ int main(void)
   std::cout << "Copying the one of the array --silently" << std::endl;
   Array <std::string> copy(str);
   std::cout << "-------------------------------------" << std::endl;
-  std::cout << "Testing a const Array> << std::endl;
-  //a continuer
-  //const Array <int> i(3) = {};
+  std::cout << "Testing a const Array" << std::endl;
+  const Array <int> co(tab);
+  std::cout << "We created a const copy of tab and we will try to access index 1" << std::endl;
+  try
+  {
+    std::cout << co[1] << std::endl;
+  }
+  catch (std::exception &e)
+  {
+    std::cout << e.what() << std::endl;
+  }
   return (0);
 }

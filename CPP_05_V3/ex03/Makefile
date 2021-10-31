@@ -1,6 +1,6 @@
 NAME			=	ex03
 CC				=	c++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98 # -g -fsanitize=address
 RM				=	rm -rf
 SRCS			=	./main.cpp ./Bureaucrat.cpp ./Form.cpp ./PresidentialPardonForm.cpp \
 						./RobotomyRequestForm.cpp ./ShrubberyCreationForm.cpp ./Intern.cpp

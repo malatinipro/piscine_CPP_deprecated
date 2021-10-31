@@ -1,6 +1,8 @@
 #include "span.hpp"
 #include <iostream>
 #include <string>
+#include <cmath>
+#include <algorithm>
 
 Span::Span(void) : _N(0)
 {

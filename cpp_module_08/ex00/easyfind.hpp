@@ -27,6 +27,7 @@ std::vector<int>::iterator easyfind(T &a, int n)
    }
    std::cout << "Element found." << std::endl;
    std::cout << "The value is " << *it << std::endl;
+   std::cout << "The memory address is " << &(*it) << std::endl;
    return (it);
 }
 

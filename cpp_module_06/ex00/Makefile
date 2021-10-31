@@ -1,6 +1,6 @@
-NAME			=	ex00
+NAME			=	convert
 CC				=	c++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 RM				=	rm -rf
 SRCS			=	./main.cpp ./check_type.cpp ./convert_to_types.cpp
 OBJS 			=	${SRCS:.cpp=.o}

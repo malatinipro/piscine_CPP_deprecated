@@ -1,5 +1,6 @@
 #include "DataClass.hpp"
 #include <iostream>
+#include <stdint.h>
 
 class Data;
 

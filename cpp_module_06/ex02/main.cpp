@@ -1,5 +1,6 @@
 #include <iostream>
-//#include <ctime>
+#include <stdlib.h>
+#include <ctime>
 
 //Cas tout designe pour dynamic cast
 class Base {

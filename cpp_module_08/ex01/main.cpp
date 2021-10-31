@@ -78,13 +78,16 @@ int main(void)
   std::cout << "The shortest span is : " << sp.shortestSpan() << std::endl;
   std::cout << "--------------------------" << std::endl;
   std::cout << "-------------------------------" << std::endl;
-  Span sp2 = Span(1000);
+  /*
+  Span sp2 = Span(10000);
   std::cout << "We just created a span with N = 1000" << std::endl;
   std::cout << "-------------------------------" << std::endl;
   std::cout << "Let's add the numbers (in one function call)!" << std::endl;
-  sp2.addRangeNumber(0, 999);
+  sp2.addRangeNumber(0, 9999);
   std::cout << "-------------------------------" << std::endl;
   std::cout << "Let's display the span" << std::endl;
   sp2.display();
   std::cout << "-------------------------------" << std::endl;
+  */
+  return (0);
 }

@@ -1,7 +1,7 @@
 #include "span.hpp"
 #include <iostream>
 
-void display_vector(std::vector<int> &v);
+//void display_vector(std::vector<int> &v);
 
 int main(void)
 {
@@ -77,7 +77,7 @@ int main(void)
   std::cout << "--------------------------" << std::endl;
   std::cout << "The shortest span is : " << sp.shortestSpan() << std::endl;
   std::cout << "--------------------------" << std::endl;
-  std::cout << "-------------------------------" << std::endl;
+  //Span sp3 = sp;
   /*
   Span sp2 = Span(10000);
   std::cout << "We just created a span with N = 1000" << std::endl;

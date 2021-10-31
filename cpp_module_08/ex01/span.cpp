@@ -82,6 +82,7 @@ void Span::display(void) const
 }
 
 //Fonction pour afficher un vecteur (simple)
+/*
 void display_vector(std::vector<int> &v)
 {
   for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
@@ -89,6 +90,7 @@ void display_vector(std::vector<int> &v)
     std::cout << *it << std::endl;
   }
 }
+*/
 
 unsigned int Span::shortestSpan(void) const
 {

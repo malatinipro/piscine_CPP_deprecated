@@ -49,7 +49,7 @@ int main(void)
   {
     std::cout << "Test avec un low bureaucrat" << std::endl;
     std::cout << "-----------------------" << std::endl;
-    Bureaucrat low("Low", 150);
+    Bureaucrat low("Low", 46);
     {
       std::cout << "------ SHRUBERRY ------" << std::endl;
       ShrubberyCreationForm shrub("test target");

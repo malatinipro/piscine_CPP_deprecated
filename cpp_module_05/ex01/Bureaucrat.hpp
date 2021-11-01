@@ -23,7 +23,7 @@ public:
 
 private:
   const std::string _name;
-  const int         _grade;
+  int               _grade;
 
   class GradeTooHighException: public std::exception
   {

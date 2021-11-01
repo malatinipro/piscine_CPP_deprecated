@@ -1,7 +1,7 @@
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
 
-RobotomyRequestForm::RobotomyRequestForm(void): Form("Robotomy Request Form", 72, 45, "default_target")
+RobotomyRequestForm::RobotomyRequestForm(void): Form("RobotomyRequestForm", 45, 72, "default_target")
 {
   std::cout << "Robotomy Request Form constructor called" << std::endl;
   return ;
@@ -13,7 +13,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src): Form(s
   return ;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string target): Form("Robotomy Request Form", 72, 45, target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string target): Form("RobotomyRequestForm", 45, 72, target)
 {
   std::cout << "Robotomy Request Form target constructor called" << std::endl;
   return ;

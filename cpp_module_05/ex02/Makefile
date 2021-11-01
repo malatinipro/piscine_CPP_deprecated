@@ -1,5 +1,5 @@
-NAME			=	ex01
-CC				=	clang++
+NAME			=	ex02
+CC				=	c++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 RM				=	rm -rf
 SRCS			=	./main.cpp ./Bureaucrat.cpp ./Form.cpp ./PresidentialPardonForm.cpp \

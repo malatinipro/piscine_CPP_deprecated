@@ -31,9 +31,9 @@ Bureaucrat::~Bureaucrat(void)
 
 Bureaucrat &	Bureaucrat::operator=(Bureaucrat const & rhs)
 {
-  (void)rhs;
+  //(void)rhs;
   std::cout << "Bureaucrat assignation operator called" << std::endl;
-  std::cout << "grade and name should be const so we can't assign them." << std::endl;
+  this->_grade = rhs._grade;
 	return *this;
 }
 

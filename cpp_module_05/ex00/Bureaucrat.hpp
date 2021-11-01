@@ -15,13 +15,13 @@ public:
 
   Bureaucrat &	operator=(Bureaucrat const & rhs);
   //accessors
-  std::string	getName(void) const;
-  int         getGrade(void) const;
+  const std::string	getName(void) const;
+  int               getGrade(void) const;
   //Modifier le grade du Bureaucrat
   void			incGrade(void);
   void			decGrade(void);
 private:
-  std::string _name;
+  const std::string _name;
   int         _grade;
 
 /*

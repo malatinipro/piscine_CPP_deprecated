@@ -13,7 +13,7 @@ class Form
 public:
   Form(void);
   Form(Form const &src);
-  Form(std::string name, int gsign, int gexec);
+  Form(std::string name, int gexec, int gsign);
   Form &				operator=(Form const &rhs);
   virtual ~Form(void);
 
@@ -23,7 +23,7 @@ public:
   bool				              isSigned(void) const;
   void				              beSigned(Bureaucrat const & bur);
 
-protected:
+private:
   const std::string	      _name;
   bool				            _signed;
   const int     	        _gexec;

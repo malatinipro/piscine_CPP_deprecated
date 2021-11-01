@@ -1,9 +1,8 @@
-NAME			=	ex00
+NAME			=	ex02
 CC				=	clang++
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 RM				=	rm -rf
-SRCS			=	./main.cpp ./animalClass.cpp ./catClass.cpp ./dogClass.cpp \
-						./wrongAnimalClass.cpp ./wrongCatClass.cpp ./wrongDogClass.cpp
+SRCS			=	./main.cpp
 
 OBJS 			=	${SRCS:.cpp=.o}
 

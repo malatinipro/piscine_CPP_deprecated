@@ -1,7 +1,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(): Form("Shrubbery Form Creation", 145, 137, "Default_target")
+ShrubberyCreationForm::ShrubberyCreationForm(): Form("ShrubberyFormCreation", 137, 145, "Default_target")
 {
   std::cout << "Shrubbery Creation Form constructor called" << std::endl;
   return ;
@@ -13,7 +13,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & src):
   return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string target): Form("Shrubbery Creation Form", 145, 137, target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string target): Form("ShrubberyCreationForm", 137, 145, target)
 {
   std::cout << "Shrubbery Creation Form target constructor called" << std::endl;
   return ;

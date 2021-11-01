@@ -1,6 +1,7 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
+//Constructeur par defaut
 Form::Form(void): _name("default_form"), _signed(false), _gexec(150), _gsign(150), _target("default_target")
 {
   std::cout << "Form default constructor called" << std::endl;
@@ -13,15 +14,20 @@ Form::Form(const Form & src): _name(src._name), _signed(false), _gexec(src._gexe
   return ;
 }
 
-Form::Form(std::string name, int gsign, int gexec, std::string target): _name(name), _signed(false), _gexec(gexec), _gsign(gsign), _target(target)
+Form::Form(std::string name, int gexec, int gsign, std::string target): _name(name), _signed(false), _gexec(gexec), _gsign(gsign), _target(target)
 {
+  //Same constraints as Bureaucrat but we 2 member attributes
   std::cout << "Form constructor constructor called" << std::endl;
 	if (this->_gexec < 1 || this->_gsign < 1)
 		throw Form::GradeTooHighException();
 	if (this->_gexec > 150 || this->_gsign > 150)
 		throw Form::GradeTooLowException();
+  std::cout << "Form called" << this->getName() << std::endl;
+  std::cout << "Grade for signing : " << this->getGsign() << std::endl;
+  std::cout << "Grade for executing : " << this->getGexec() << std::endl;
+  std::cout << "Has been created successfully." << std::endl;
+  return ;
 }
-
 Form::~Form(void)
 {
   std::cout << "Form deconstructor called" << std::endl;

@@ -24,8 +24,17 @@ Cat::~Cat(void)
 
 Cat &				Cat::operator=(Cat const &rhs )
 {
+  //Attention cette methode n est pas bonne !
+
+  /*	
   Animal::operator=(rhs);
   *_brain = *rhs._brain;
+  */
+  if (this == &src)
+	  return (*this);
+  this->_type = src.getType();
+  detete this->_brain;
+  this->_brain = new Brain(*src._brain);
   return (*this);
 }
 

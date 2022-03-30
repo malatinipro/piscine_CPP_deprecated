@@ -8,6 +8,8 @@
 
 Cette piscine **CPP** a été réalisée en Octobre 2021 suite à différentes évolutions du sujet. La plupart des days peuvent être **validés à 80%**. 
 
+![Alt text](/cpp.png?raw=true "CPP")
+
 Nous avons constaté qu'il était possible d'**obtenir les points d'un exercice** même si le précédent était noté faux. Faites attention à bien tester sur différents OS car il y a de grandes différences de compilation entre **macOS et Linux**. A noter également que j'ai obtenu l'intégralité de l'XP du projet alors même que je n'avais pas réalisé tous les exercices. 
 **Je vous invite à croiser de nombreuses sources** car des "subtilités" importantes sont souvent oubliées dans la majorité des projets. 
 

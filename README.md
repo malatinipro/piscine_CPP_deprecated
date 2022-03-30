@@ -1,4 +1,10 @@
-# Piscine CPP 42 | 2021
+# CPP
+
+- Actual Status : validated.
+- Result        : 100% (validated 31/10/2021)
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 Cette piscine **CPP** a été réalisée en Octobre 2021 suite à différentes évolutions du sujet. La plupart des days peuvent être **validés à 80%**. 
 

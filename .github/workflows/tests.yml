@@ -56,7 +56,7 @@ jobs:
       run: cd ./cpp_piscine/cpp_module_03/ex01; make test;
 
     - name: test cpp 03 ex02
-     run: cd ./cpp_piscine/cpp_module_03/ex02; make test;
+      run: cd ./cpp_piscine/cpp_module_03/ex02; make test;
 
     - name: test cpp 04 ex00
       run: cd ./cpp_piscine/cpp_module_04/ex00; make test;

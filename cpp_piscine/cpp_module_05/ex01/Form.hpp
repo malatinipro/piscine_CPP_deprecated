@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:23:12 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 19:03:06 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 20:30:12 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Form
     const int               &getGsign(void) const;
     const int               &getGexec(void) const;
     bool				            isSigned(void) const;
-    void				            beSigned(Bureaucrat const & bur);
+    void				            beSigned(Bureaucrat const &bur);
 
   private:
     const std::string	      _name;

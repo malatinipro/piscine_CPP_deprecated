@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:31:43 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 15:41:51 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:42:09 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:43:10 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ int main(void)
   Intern someRandomIntern;
   Form* rrf;
   {
+    std::cout << "The args are 'robotomy request' and 'Bender'" << std::endl;
     rrf = someRandomIntern.makeForm("robotomy request", "Bender");
     std::cout << *rrf << std::endl;
     delete rrf;
   }
   {
+    std::cout << "The args are 'shrubbery creation' and 'Target'" << std::endl;
     std::string s1 = "shrubbery creation";
     try
     {
@@ -40,6 +42,7 @@ int main(void)
     {
       std::cout << e.what() << std::endl;
     }
+    std::cout << "The args are 'does not exist form' and 'Target'" << std::endl;
     std::string s2 = "does not exist form";
     try
     {

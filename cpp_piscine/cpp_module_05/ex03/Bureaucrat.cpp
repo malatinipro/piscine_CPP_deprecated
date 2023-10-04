@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:28:12 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 19:08:54 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:32:58 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:34:08 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@ Bureaucrat::Bureaucrat(void): _name("Bureaucrat"), _grade(150)
 	return ;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &src): _name(src._name),
+Bureaucrat::Bureaucrat(const Bureaucrat & src): _name(src._name),
 	_grade(src._grade)
 {
 	return ;
 }
 
-Bureaucrat::Bureaucrat(std::string const name, int grade): _name(name),
-	_grade(grade)
+Bureaucrat::Bureaucrat(std::string const name, int grade): _name(name), _grade(grade)
 {
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
@@ -43,10 +42,11 @@ Bureaucrat::~Bureaucrat(void)
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &rhs)
 {
 	(void)rhs;
+	std::cout << "grade and name should be const so we can't assign them." << std::endl;
 	return *this;
 }
 
-std::ostream	&operator<<(std::ostream &COUT, Bureaucrat const &rhs)
+std::ostream &  operator<<(std::ostream &COUT, Bureaucrat const & rhs)
 {
 	COUT << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
 	return COUT;
@@ -85,8 +85,7 @@ void	Bureaucrat::executeForm(Form &form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << this->_name << " cannot execute "
-			<< form.getName() << ": ";
+		std::cerr << this->_name << " cannot execute " << form.getName() << ": ";
 		std::cerr << e.what() << std::endl;
 		return ;
 	}

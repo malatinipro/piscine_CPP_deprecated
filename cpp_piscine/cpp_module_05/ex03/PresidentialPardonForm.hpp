@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:32:33 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 19:12:54 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:45:14 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:45:50 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ class PresidentialPardonForm: public Form
     virtual ~PresidentialPardonForm(void);
     PresidentialPardonForm  &operator=(PresidentialPardonForm const &rhs);
 
-    virtual void  execute(Bureaucrat const &executor);
+    virtual void            execute(Bureaucrat const &executor);
 };

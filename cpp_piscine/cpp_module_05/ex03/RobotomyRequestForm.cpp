@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:32:41 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 19:13:05 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:45:57 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:46:48 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,13 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
   return ;
 }
 
-RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm
-  const &rhs )
+RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &rhs)
 {
-  (void)rhs;
-  return *this;
+	(void)rhs;
+	return *this;
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const &executor)
+void RobotomyRequestForm::execute(Bureaucrat const & executor)
 {
   (void)executor;
 	int ret = rand();
@@ -58,7 +57,9 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor)
   }
   std::cout << "BZZZ * DRILL NOISES * BZZZZ" << std::endl;
   if (ret % 2 == 0)
+  {
     std::cout << this->_target << " has been robotomized" << std::endl;
+  }
   else
     std::cout << this->_target << "Robotomization failed" << std::endl;
 }

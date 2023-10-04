@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:33:26 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 17:46:32 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:47:47 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:49:06 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ ShrubberyCreationForm::ShrubberyCreationForm():
 	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm
-	&src): Form(src)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src):
+	Form(src)
 {
 	return ;
 }
@@ -36,8 +36,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
 	return ;
 }
 
-ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm const
-	&rhs)
+ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs)
 {
 	(void)rhs;
 	return *this;
@@ -45,6 +44,7 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 
 void	ShrubberyCreationForm::execute(Bureaucrat const &executor)
 {
+  (void)executor;
 	std::ofstream	output;
 	const std::string	name = this->_target + "_shrubbery";
 	try
@@ -58,7 +58,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor)
 		return ;
 	}
 	output << "           _  _             _  _" << std::endl;
-  	output << "  .       /\\\\/%\\       .   /%\\/%\\     ." << std::endl;
+	output << "  .       /\\\\/%\\       .   /%\\/%\\     ." << std::endl;
 	output << "      __.<\\\\%#//\\,_       <%%#/%%\\,__  ." << std::endl;
 	output << ".    <%#/|\\\\%%%#///\\    /^%#%%\\///%#\\\\" << std::endl;
 	output << "      \"\"/%/\"\"\\ \\\"\"//|   |/\"\"\'/ /\\//\"//'" << std::endl;

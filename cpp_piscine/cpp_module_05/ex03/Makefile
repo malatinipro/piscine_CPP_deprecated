@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/04 12:31:54 by mahautlatin       #+#    #+#              #
-#    Updated: 2023/10/04 19:12:14 by mahautlatin      ###   ########.fr        #
+#    Created: 2023/10/04 20:43:34 by mahautlatin       #+#    #+#              #
+#    Updated: 2023/10/04 20:52:06 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,9 @@ NAME			=	ex03
 CC				=	clang++
 CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 RM				=	rm -rf
-SRCS			=	./main.cpp ./Bureaucrat.cpp ./Form.cpp \
-					./PresidentialPardonForm.cpp \
-					./RobotomyRequestForm.cpp ./ShrubberyCreationForm.cpp \
-					./Intern.cpp
+SRCS			=	./main.cpp ./Bureaucrat.cpp ./Form.cpp \
+					./PresidentialPardonForm.cpp ./RobotomyRequestForm.cpp \
+					./ShrubberyCreationForm.cpp ./Intern.cpp
 
 OBJS 			=	${SRCS:.cpp=.o}
 

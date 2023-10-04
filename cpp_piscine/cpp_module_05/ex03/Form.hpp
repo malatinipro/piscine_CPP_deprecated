@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:29:33 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 19:11:18 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:36:53 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:38:41 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 # include <iostream>
 # include <string>
 
-# include "Bureaucrat.hpp"
+#include "Bureaucrat.hpp"
 
 class Bureaucrat;
+
 class Form
 {
   public:
@@ -32,44 +33,47 @@ class Form
     const int                 &getGsign(void) const;
     const int                 &getGexec(void) const;
     bool                      isSigned(void) const;
-    Form                      &beSigned(Bureaucrat const &bur);
+    Form                      &beSigned(Bureaucrat const & bur);
     void                      setSign(void);
-    virtual void              execute(Bureaucrat const &executor) = 0;
+
+    virtual void              execute(Bureaucrat const & executor) = 0;
 
   protected:
     const std::string	        _name;
-    bool				              _signed;
-    const int     	          _gexec;
-    const int		              _gsign;
-    std::string     	        _target;
+    bool                      _signed;
+    const int                _gexec;
+    const int                _gsign;
+    std::string              _target;
 
-    class GradeTooHighException: public std::exception
+  class GradeTooHighException: public std::exception
+	{
+		virtual const char *what() const throw()
     {
-      virtual const char *what() const throw()
-      {
-          return ("Oops ! Grade too high");
-      }
-    };
+        return ("Oops ! Grade too high");
+    }
+	};
 
-    class GradeTooLowException: public std::exception
+	class GradeTooLowException: public std::exception
+	{
+		virtual const char *what() const throw()
     {
-      virtual const char * what() const throw()
-      {
-          return ("Oops ! Grade too low");
-      }
-    };
-    class FormNotSignedException: public std::exception
+        return ("Oops ! Grade too low");
+    }
+	};
+
+  class FormNotSignedException: public std::exception
+	{
+		virtual const char *what() const throw()
     {
-      virtual const char * what() const throw()
-      {
-        return ("Oops ! This form is not signed yet");
-      }
-    };
-    class FormAlreadySignedException: public std::exception
+      return ("Oops ! This form is not signed yet");
+    }
+	};
+
+  class FormAlreadySignedException: public std::exception
+	{
+		virtual const char * what() const throw()
     {
-      virtual const char * what() const throw()
-      {
-        return ("Oops ! This form is already signed.");
-      }
-    };
+      return ("Oops ! This form is already signed.");
+    }
+	};
 };

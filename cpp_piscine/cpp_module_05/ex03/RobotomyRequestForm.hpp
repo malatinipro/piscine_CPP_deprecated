@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:33:18 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 19:13:15 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:46:54 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:47:41 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ class RobotomyRequestForm: public Form
     RobotomyRequestForm(std::string const target);
     virtual ~RobotomyRequestForm(void);
     RobotomyRequestForm &operator=(RobotomyRequestForm const &rhs);
-    virtual void  execute(Bureaucrat const &executor);
+
+    virtual void        execute(Bureaucrat const & executor);
 };

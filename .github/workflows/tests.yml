@@ -1,0 +1,107 @@
+name: tests
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: test cpp 00 ex00
+      run: cd ./cpp_piscine/cpp_module_00/ex00; make test;
+
+    - name: test cpp 00 ex01
+      run: cd ./cpp_piscine/cpp_module_00/ex01; make;
+
+    - name: test cpp 01 ex00
+      run: cd ./cpp_piscine/cpp_module_01/ex00; make test;
+
+    - name: test cpp 01 ex01
+      run: cd ./cpp_piscine/cpp_module_01/ex01; make;
+
+    - name: test cpp 01 ex02
+      run: cd ./cpp_piscine/cpp_module_01/ex02; make test;
+
+    - name: test cpp 01 ex03
+      run: cd ./cpp_piscine/cpp_module_01/ex03; make test;
+
+    - name: test cpp 01 ex04
+      run: cd ./cpp_piscine/cpp_module_01/ex04; make;
+
+    - name: test cpp 01 ex05
+      run: cd ./cpp_piscine/cpp_module_01/ex05; make test;
+
+    - name: test cpp 01 ex06
+      run: cd ./cpp_piscine/cpp_module_01/ex06; make test;
+
+    - name: test cpp 02 ex00
+      run: cd ./cpp_piscine/cpp_module_02/ex00; make test;
+
+    - name: test cpp 02 ex01
+      run: cd ./cpp_piscine/cpp_module_02/ex01; make test;
+
+    - name: test cpp 02 ex02
+      run: cd ./cpp_piscine/cpp_module_02/ex02; make test;
+
+    - name: test cpp 03 ex00
+      run: cd ./cpp_piscine/cpp_module_03/ex00; make test;
+
+    - name: test cpp 03 ex01
+      run: cd ./cpp_piscine/cpp_module_03/ex01; make test;
+
+    - name: test cpp 03 ex02
+      run: cd ./cpp_piscine/cpp_module_03/ex02; make test;
+
+    - name: test cpp 04 ex00
+      run: cd ./cpp_piscine/cpp_module_04/ex00; make test;
+
+    - name: test cpp 04 ex01
+      run: cd ./cpp_piscine/cpp_module_04/ex01; make test;
+
+    - name: test cpp 04 ex02
+      run: cd ./cpp_piscine/cpp_module_04/ex02; make test;
+
+    - name: test cpp 05 ex00
+      run: cd ./cpp_piscine/cpp_module_05/ex00; make test;
+
+    - name: test cpp 05 ex01
+      run: cd ./cpp_piscine/cpp_module_05/ex01; make test;
+
+    - name: test cpp 05 ex02
+      run: cd ./cpp_piscine/cpp_module_05/ex02; make test;
+
+    - name: test cpp 05 ex03
+      run: cd ./cpp_piscine/cpp_module_05/ex03; make test;
+
+    - name: test cpp 06 ex00
+      run: cd ./cpp_piscine/cpp_module_06/ex00; make test;
+
+    - name: test cpp 06 ex01
+      run: cd ./cpp_piscine/cpp_module_06/ex01; make test;
+
+    - name: test cpp 06 ex02
+      run: cd ./cpp_piscine/cpp_module_06/ex02; make test;
+
+    - name: test cpp 07 ex00
+      run: cd ./cpp_piscine/cpp_module_07/ex00; make test;
+
+    - name: test cpp 07 ex01
+      run: cd ./cpp_piscine/cpp_module_07/ex01; make test;
+
+    - name: test cpp 07 ex02
+      run: cd ./cpp_piscine/cpp_module_07/ex02; make test;
+
+    - name: test cpp 08 ex00
+      run: cd ./cpp_piscine/cpp_module_08/ex00; make test;
+
+    - name: test cpp 08 ex01
+      run: cd ./cpp_piscine/cpp_module_08/ex01; make test;
+
+    - name: test cpp 08 ex02
+      run: cd ./cpp_piscine/cpp_module_08/ex02; make test;

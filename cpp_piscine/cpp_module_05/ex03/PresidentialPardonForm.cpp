@@ -5,40 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:31:57 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 19:12:34 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 20:44:09 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 20:45:08 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm():
-	Form("PresidentialPardonForm", 5, 25, "default_target")
+  Form("PresidentialPardonForm", 5, 25, "default_target")
 {
-	return ;
+  return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm
-	&src):
-	Form(src)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src):
+  Form(src)
 {
-	this->_target = src.getTarget();
-	return ;
+  this->_target = src.getTarget();
+  return ;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string const target):
-	Form("PresidentialPardonForm", 5, 25, target)
+  Form("PresidentialPardonForm", 5, 25, target)
 {
-	return ;
+  return ;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	return ;
+  return ;
 }
 
-PresidentialPardonForm	&PresidentialPardonForm::operator=(PresidentialPardonForm
-	const &rhs)
+PresidentialPardonForm  &PresidentialPardonForm::operator=(PresidentialPardonForm const &rhs)
 {
 	(void)rhs;
 	return *this;
@@ -46,16 +44,16 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=(PresidentialPardonForm
 
 void	PresidentialPardonForm::execute(Bureaucrat const &executor)
 {
-	(void)executor;
-	try
+  (void)executor;
+  try
 	{
 		Form::execute(executor);
 	}
-  	catch(const std::exception& e)
+  catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 		return ;
 	}
-	std::cout << this->_target
-	<< " was forgiven by Zafod Beeblebrox" << std::endl;
+	std::cout << this->_target << " was forgiven by Zafod Beeblebrox" << std::endl;
+  return ;
 }

@@ -6,7 +6,7 @@
 #    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 12:48:00 by mahautlatin       #+#    #+#              #
-#    Updated: 2023/10/04 12:57:06 by mahautlatin      ###   ########.fr        #
+#    Updated: 2023/10/04 18:23:00 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,5 +32,8 @@ fclean			:	clean
 					$(RM) $(NAME)
 
 re				: 	fclean all
+
+test			:	$(NAME)
+					./brainz_00
 
 .PHONY: 			all fclean clean re

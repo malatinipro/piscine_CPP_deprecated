@@ -6,35 +6,33 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:05:12 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:05:13 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:40:54 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
 # include <iostream>
-#include <cmath>
+# include <cmath>
 
-class Fixed {
-public:
-	Fixed(void);
-    Fixed(const int int_to_convert);
-    Fixed(const float float_to_convert);
-	Fixed(Fixed const & src);
-	~Fixed(void);
-	Fixed & operator=(Fixed const &rhs);
+class Fixed
+{
+	public:
+		Fixed(void);
+		Fixed(const int int_to_convert);
+		Fixed(const float float_to_convert);
+		Fixed(Fixed const & src);
+		~Fixed(void);
+		Fixed & operator=(Fixed const &rhs);
 
-	int		getRawBits(void) const;
-	void	setRawBits(int const raw);
-    float   toFloat(void) const;
-    int     toInt(void) const;
+		int		getRawBits(void) const;
+		void	setRawBits(int const raw);
+		float   toFloat(void) const;
+		int     toInt(void) const;
 
-private:
-	int 				_fix_point;
-	static const int	_fract_bits = 8;
+	private:
+		int 				_fix_point;
+		static const int	_fract_bits = 8;
 };
 
 std::ostream & operator<<(std::ostream &COUT, Fixed const & rhs);
-
-#endif

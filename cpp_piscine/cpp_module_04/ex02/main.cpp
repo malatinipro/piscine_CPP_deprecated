@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:54:23 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 14:55:27 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:57:04 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@
 int main(void)
 {
   {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const Animal  *j = new Dog();
+    const Animal  *i = new Cat();
+
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
+
     i->makeSound();
     j->makeSound();
+
     delete j;
     delete i;
   }

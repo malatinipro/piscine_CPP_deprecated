@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:53:09 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 14:53:19 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:56:38 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ class Cat: public Animal
     Cat(void);
     Cat(Cat const &src);
     virtual ~Cat(void);
-    Cat &			operator=(Cat const &rhs );
-    void	makeSound(void) const;
+
+    Cat   &operator=(Cat const &rhs );
+    void  makeSound(void) const;
+
   private:
     Brain *_brain;
 };

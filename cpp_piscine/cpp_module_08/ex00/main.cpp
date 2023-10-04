@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:58:31 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:58:52 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 17:58:58 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int main(void)
     int n = sizeof(arr) / sizeof(arr[0]);
     std::vector<int> my_vector(arr, arr + n);
     std::cout << "The vector stores the collection {1, 2, 4, 6, 7}" << std::endl;
-    std::cout << "We'll be looking for the 6 value" << std::endl;
     try
     {
       easyfind(my_vector, 6);

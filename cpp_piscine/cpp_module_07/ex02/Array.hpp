@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:43:29 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:44:28 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 17:57:26 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARRAY_HPP
-#define ARRAY_HPP
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -79,5 +78,3 @@ class Array
     T             *_arr;
     unsigned int  _size;
 };
-
-#endif

@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:48:25 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 14:48:52 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:54:54 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog(void): Animal("Dog")
 	return ;
 }
 
-Dog::Dog(const Dog & src): Animal(src), _brain(new Brain(*src._brain))
+Dog::Dog(const Dog &src): Animal(src), _brain(new Brain(*src._brain))
 {
 	return ;
 }

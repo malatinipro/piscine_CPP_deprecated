@@ -6,43 +6,45 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:33:26 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:34:00 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 17:46:32 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-//TODO: fixme
-ShrubberyCreationForm::ShrubberyCreationForm(): Form("ShrubberyFormCreation", 137, 145, "Default_target")
+ShrubberyCreationForm::ShrubberyCreationForm():
+	Form("ShrubberyFormCreation", 137, 145, "Default_target")
 {
-  return ;
+	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & src): Form(src)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm
+	&src): Form(src)
 {
-  return ;
+	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string target): Form("ShrubberyCreationForm", 137, 145, target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string target):
+	Form("ShrubberyCreationForm", 137, 145, target)
 {
-  return ;
+	return ;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)
 {
-  return ;
+	return ;
 }
 
-ShrubberyCreationForm &				ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)
+ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm const
+	&rhs)
 {
 	(void)rhs;
 	return *this;
 }
 
-void	ShrubberyCreationForm::execute(Bureaucrat const & executor)
+void	ShrubberyCreationForm::execute(Bureaucrat const &executor)
 {
-	(void)executor;
 	std::ofstream	output;
 	const std::string	name = this->_target + "_shrubbery";
 	try

@@ -6,15 +6,14 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:52:23 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:52:33 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:07:47 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-#define HUMANB_HPP
+#pragma once
 
-#include "./Weapon.hpp"
-#include <iostream>
+# include "./Weapon.hpp"
+# include <iostream>
 
 class HumanB
 {
@@ -29,5 +28,3 @@ class HumanB
         std::string _name;
         Weapon  *_weapon;
 };
-
-#endif

@@ -6,13 +6,12 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:53:18 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:53:36 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:06:57 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-//TODO: fix
 HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
 {
     return ;
@@ -20,7 +19,7 @@ HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
 
 HumanA::~HumanA(void)
 {
-	return ;
+    return ;
 }
 
 void    HumanA::attack(void)

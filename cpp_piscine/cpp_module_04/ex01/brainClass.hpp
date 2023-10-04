@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:47:16 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 14:47:34 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:54:20 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Brain
 		Brain(const std::string ideas[100]);
 		virtual ~Brain(void);
 
-		Brain &		operator=(Brain const & rhs);
-		void		display_ideas(void) const;
+		Brain	&operator=(Brain const & rhs);
+		void	display_ideas(void) const;
 
 	protected:
 		std::string	ideas[100];

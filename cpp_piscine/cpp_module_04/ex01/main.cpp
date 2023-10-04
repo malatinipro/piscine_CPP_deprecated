@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:49:26 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 14:50:28 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:55:25 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 int main(void)
 {
   {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const Animal	*j = new Dog();
+    const Animal	*i = new Cat();
 
     delete j;
     delete i;

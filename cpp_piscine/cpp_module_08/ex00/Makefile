@@ -21,4 +21,7 @@ fclean			:	clean
 
 re				: 	fclean all
 
+test			:	$(NAME)
+					./ex00
+
 .PHONY: 			all fclean clean re

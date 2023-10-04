@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:24:32 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:24:34 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:04:55 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#pragma once
 
 # include "Form.hpp"
 # include <iostream>
@@ -22,22 +21,21 @@ class Form;
 
 class Bureaucrat
 {
-public:
-  Bureaucrat(void);
-  Bureaucrat(Bureaucrat const & src);
-  Bureaucrat(std::string const name, int grade);
-  virtual ~Bureaucrat(void);
+  public:
+    Bureaucrat(void);
+    Bureaucrat(Bureaucrat const &src);
+    Bureaucrat(std::string const name, int grade);
+    virtual ~Bureaucrat(void);
 
-  Bureaucrat &	operator=(Bureaucrat const & rhs);
-  std::string	  getName(void) const;
-  int           getGrade(void) const;
-  void			    signForm(Form &form);
+    Bureaucrat        &operator=(Bureaucrat const &rhs);
+    std::string	      getName(void) const;
+    int               getGrade(void) const;
+    void              signForm(Form &form);
+    void              executeForm(Form &form);
 
-  void	        executeForm(Form &form);
-
-private:
-  const std::string _name;
-  const int         _grade;
+  private:
+    const std::string _name;
+    const int         _grade;
 
   class GradeTooHighException: public std::exception
   {
@@ -57,6 +55,4 @@ private:
   };
 };
 
-std::ostream &  operator<<( std::ostream &o, Bureaucrat const &rhs);
-
-#endif
+std::ostream  &operator<<( std::ostream &o, Bureaucrat const &rhs);

@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:00:59 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 13:01:16 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:01:58 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SPAN_HPP
-#define SPAN_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -24,12 +23,14 @@ class Span
     Span(Span const &src);
     Span(unsigned int N);
     virtual ~Span();
-    Span & operator=(Span const & src);
+
+    Span & operator=(Span const &src);
+
     void	            addNumber(int const nb);
     void              addRangeNumber(int a, int b);
     unsigned int      shortestSpan(void) const;
     unsigned int      longestSpan(void) const;
-    unsigned int      getN(void)const;
+    unsigned int      getN(void) const;
     void              display(void) const;
 
   private:
@@ -37,6 +38,4 @@ class Span
     std::vector<int>  _numbers;
 };
 
-std::ostream & operator<<(std::ostream & o, Span const & rhs);
-
-#endif
+std::ostream & operator<<(std::ostream &o, Span const &rhs);

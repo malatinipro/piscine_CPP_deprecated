@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:51:12 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 14:51:27 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:55:39 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Animal::Animal(void)
 	return ;
 }
 
-Animal::Animal(const Animal & src): type(src.type)
+Animal::Animal(const Animal &src): type(src.type)
 {
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:52:44 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 14:53:01 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:56:21 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat(void): _brain(new Brain())
   return ;
 }
 
-Cat::Cat(const Cat & src): Animal(src), _brain(new Brain(*src._brain))
+Cat::Cat(const Cat &src): Animal(src), _brain(new Brain(*src._brain))
 {
   return ;
 }
@@ -31,7 +31,7 @@ Cat::~Cat(void)
   return ;
 }
 
-Cat &				Cat::operator=(Cat const &rhs )
+Cat &Cat::operator=(Cat const &rhs)
 {
   Animal::operator=(rhs);
   *_brain = *rhs._brain;

@@ -3,28 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   PhonebookClass.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 19:23:33 by user42            #+#    #+#             */
-/*   Updated: 2021/10/12 18:52:21 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:03:35 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOKCLASS_HPP
-#define PHONEBOOKCLASS_HPP
+#pragma once
 
-#include <string>
-#include <iomanip>
-#include <iostream>
-#include "./ContactClass.hpp"
+# include <string>
+# include <iomanip>
+# include <iostream>
+# include "./ContactClass.hpp"
 
 class Phonebook {
+    public:
+        Contact contact[8];
+        Phonebook(void);
+        ~Phonebook(void);
 
-public:
-    Contact contact[8];
-    Phonebook(void);
-    ~Phonebook(void);
-
-    void launch(void);
+        void launch(void);
 };
-#endif

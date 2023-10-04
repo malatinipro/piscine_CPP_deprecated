@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:28:19 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:28:35 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:09:36 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#pragma once
 
 # include "Form.hpp"
 # include <iostream>
@@ -19,20 +18,18 @@
 # include <exception>
 
 class Form;
-
 class Bureaucrat
 {
   public:
     Bureaucrat(void);
-    Bureaucrat(Bureaucrat const & src);
+    Bureaucrat(Bureaucrat const &src);
     Bureaucrat(std::string const name, int grade);
     virtual ~Bureaucrat(void);
+    Bureaucrat    &operator=(Bureaucrat const &rhs);
 
-    Bureaucrat &	operator=(Bureaucrat const & rhs);
     std::string	  getName(void) const;
     int           getGrade(void) const;
     void			    signForm(Form &form);
-
     void	        executeForm(Form &form);
 
   private:
@@ -55,9 +52,7 @@ class Bureaucrat
         {
           return ("Oops ! Grade too low");
         }
-    };
+  };
 };
 
-std::ostream &  operator<<( std::ostream &o, Bureaucrat const &rhs);
-
-#endif
+std::ostream  &operator<<( std::ostream &o, Bureaucrat const &rhs);

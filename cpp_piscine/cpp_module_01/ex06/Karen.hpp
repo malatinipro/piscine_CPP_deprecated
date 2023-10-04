@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:49:28 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:49:46 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef KAREN_HPP
 #define KAREN_HPP
 
@@ -6,21 +18,16 @@
 
 class Karen
 {
+    typedef void (Karen::*f)(void)const;
+    public:
+        Karen();
+        ~Karen();
+        void    complain(std::string level) const;
 
-/* Ceci est un pointeur sur fonction membre comme demande par le sujet */
-typedef void (Karen::*f)(void)const;
-public:
-    Karen();
-    ~Karen();
-
-    void    complain(std::string level) const;
-
-private:
-    /* Ce sont bien des fonctions membres et pas des attributs */
-    void _debug(void) const;
-    void _info(void) const;
-    void _warning(void) const;
-    void _error(void) const;
+    private:
+        void _debug(void) const;
+        void _info(void) const;
+        void _warning(void) const;
+        void _error(void) const;
 };
-
 #endif

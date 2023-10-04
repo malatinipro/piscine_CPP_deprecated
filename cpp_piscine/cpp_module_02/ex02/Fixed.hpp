@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:07:24 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:07:43 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
@@ -11,8 +23,6 @@ public:
     Fixed(const float float_to_convert);
 	Fixed(Fixed const & src);
 	~Fixed(void);
-    //L'operateur d'assignation est binaire
-    //rhs = right hand side = ce que je souhaite assigner
 	Fixed & operator=(Fixed const &rhs);
 
 	int		getRawBits(void) const;
@@ -20,29 +30,23 @@ public:
     float   toFloat(void) const;
     int     toInt(void) const;
 
-    /* Overloads supplementaires - ex02 */
-    /* comparaison */
     bool        operator>(Fixed const &rhs) const;
     bool	    operator<(Fixed const & rhs) const;
 	bool	    operator>=(Fixed const & rhs) const;
 	bool	    operator<=(Fixed const & rhs) const;
 	bool	    operator==(Fixed const & rhs) const;
 	bool	    operator!=(Fixed const & rhs) const;
-    /* arithmetiques */
+
     Fixed	    operator+(Fixed const & rhs) const;
 	Fixed	    operator-(Fixed const & rhs) const;
 	Fixed	    operator*(Fixed const & rhs) const;
 	Fixed	    operator/(Fixed const & rhs) const;
-    /* incrementation */
-    //https://docs.microsoft.com/fr-fr/cpp/cpp/increment-and-decrement-operator-overloading-cpp?view=msvc-160
-    //& pre increment 
-    //sans & post increment
+
 	Fixed	    operator++(int);
     Fixed&	    operator++(void);
 	Fixed	    operator--(int);
     Fixed&	    operator--(void);
 
-    //fonctions de classe (statique)
     static Fixed const &	min(Fixed const & f1, Fixed const & f2);
     static Fixed const &	max(Fixed const & f1, Fixed const & f2);
     static Fixed &	min(Fixed & f1, Fixed & f2);

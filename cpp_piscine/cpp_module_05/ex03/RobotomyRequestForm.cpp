@@ -1,41 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:32:41 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:33:05 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
 
+//TODO: fixme ?
 RobotomyRequestForm::RobotomyRequestForm(void): Form("RobotomyRequestForm", 45, 72, "default_target")
 {
-  //std::cout << "Robotomy Request Form constructor called" << std::endl;
   return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src): Form(src)
 {
-  //std::cout << "Robotomy Request Form copy constructor called" << std::endl;
   return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string target): Form("RobotomyRequestForm", 45, 72, target)
 {
-  //std::cout << "Robotomy Request Form target constructor called" << std::endl;
   return ;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(void)
 {
-//std::cout << "Robotomy Request Form destructor called" << std::endl;
   return ;
 }
 
 RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm const & rhs )
 {
 	(void)rhs;
-  //std::cout << "Robotomy Request assignation operator called" << std::endl;
 	return *this;
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor)
 {
   (void)executor;
-  //std::cout << "Robotomy Request Form execution" << std::endl;
 	int ret = rand();
   try
   {

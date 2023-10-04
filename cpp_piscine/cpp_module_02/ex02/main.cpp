@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:07:46 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:08:04 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include "Fixed.hpp"
 
@@ -10,31 +22,16 @@ Fixed &	max(Fixed & f1, Fixed & f2);
 int main(void) {
     std::cout << "--------- TESTS SUJETS ----------" << std::endl;
     Fixed a;
-    /*
-    v
-    b.toInt();
-    Fixed c(3.14f);
-    c.toFloat();
-    */
-    //Fixed(10.0f);
     Fixed const b(Fixed(5.05f) * Fixed(2));
-    //Test de la pre incrementation
     std::cout << a << std::endl;
     std::cout << ++a << std::endl;
     std::cout << a << std::endl;
-    //test de la post incrementation
-   // std::cout << "Test de la post incrementation" << std::endl;
-   // std::cout << "A is " << a << std::endl;
     std::cout << a++ << std::endl;
-   // std::cout << "A is " << a << std::endl;
-    //On va ajouter 1/246 eme a chaque fois donc environ 0.003962
     std::cout << a << std::endl;
     std::cout << b << std::endl;
     Fixed const c(2);
     Fixed const d(5);
-    //min et max
     std::cout << Fixed::max(a, b) << std::endl;
-    //overloads
     std::cout << "-------------------" << std::endl;
     std::cout << "--------- TEST SUPPLEMENTAIRES ----------" << std::endl;
     std::cout << "--------- min / max overloads ----------" << std::endl;

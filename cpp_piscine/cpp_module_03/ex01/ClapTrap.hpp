@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:13:36 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:13:37 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
@@ -19,11 +31,10 @@ class ClapTrap
         void           setter_name(std::string name);
         std::string    getter_name(void);
 
-    //On a besoin que ce soit heritable donc protected et pas private
     protected:
         std::string         _name;
         unsigned int        _hit_points;
         unsigned int        _energy_points;
         unsigned int        _attack_damage;
 };
-#endif 
+#endif

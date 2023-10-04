@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   convert_to_types.cpp                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:35:16 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:36:02 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string>
 #include <iostream>
 #include <climits>
@@ -16,8 +28,8 @@ void display_char(std::string const &str)
   char c = str[0];
   std::cout << "char: " << c << std::endl;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
-	std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;//<< ".0f"
-	std::cout << "double: " << static_cast<double>(c) << ".0" << std::endl; //".0"
+	std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;
+	std::cout << "double: " << static_cast<double>(c) << ".0" << std::endl;
 }
 
 bool display_int(std::string const &str)
@@ -26,13 +38,6 @@ bool display_int(std::string const &str)
 	int			i = 0;
 
   (void)l;
-  /*
-	if (l > INT_MAX || l < INT_MIN)
-	{
-		std::cerr << "Error: invalid value" << std::endl;
-		return (false);
-	}
-  */
 	i = atoi(str.data());
 	if (i > CHAR_MAX || i < CHAR_MIN)
 		std::cout << "char: Non displayable" << std::endl;
@@ -40,9 +45,9 @@ bool display_int(std::string const &str)
   	std::cout << "char: Non displayable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(i) << std::endl;
-	std::cout << "int: " << i << std::endl;
-	std::cout << "float: " << static_cast<float>(i) << ".0f" << std::endl;
-	std::cout << "double: " << static_cast<double>(i) << ".0" << std::endl;
+    std::cout << "int: " << i << std::endl;
+    std::cout << "float: " << static_cast<float>(i) << ".0f" << std::endl;
+    std::cout << "double: " << static_cast<double>(i) << ".0" << std::endl;
 	return (true);
 }
 
@@ -52,7 +57,6 @@ bool	display_float(std::string const & str)
   const std::string s2 = "+inff";
   const std::string s3 = "-inff";
 
-  //std::cout << "float display function called" << std::endl;
   if (str == s1 || str == s2 || str == s3)
   {
     std::cout << "char: impossible" << std::endl;
@@ -69,7 +73,7 @@ bool	display_float(std::string const & str)
 		std::cerr << "Error: invalid value" << std::endl;
 		return (false);
 	}
-  //conversion en float
+
 	f = atof(str.data());
 	if (static_cast<int>(f) > CHAR_MAX || static_cast<int>(f) < CHAR_MIN)
 		std::cout << "char: Non displayable" << std::endl;
@@ -100,7 +104,6 @@ bool	display_double(std::string const & str)
   const std::string s2 = "+inf";
   const std::string s3 = "-inf";
 
-  //std::cout << "double display function called" << std::endl;
   if (str == s1 || str == s2 || str == s2)
   {
     std::cout << "char: impossible" << std::endl;
@@ -109,7 +112,7 @@ bool	display_double(std::string const & str)
     std::cout << "double: " << str << std::endl;
     return (true);
   }
-  //converts a string to a double
+
 	double	d = strtod(str.data(), NULL);
 	if (errno == ERANGE)
 	{
@@ -137,7 +140,7 @@ bool	display_double(std::string const & str)
     std::cout << "double: " << static_cast<double>(d) << ".0" << std::endl;
   }
   return (true);
-	
+
 }
 
 bool  convert_to_types(std::string const &str)

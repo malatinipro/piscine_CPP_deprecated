@@ -1,15 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:04:16 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:04:17 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./Fixed.hpp"
 
-/* Main du sujet */
 int main(void) {
-	//Instanciation via constructeur par defaut
 	Fixed a;
-	//Instanciation via constructeur par copie
 	Fixed b(a);
 	Fixed c;
-	//Utilisation de l'operateur d'assignation
 	c = b;
-	//Affichage des valeurs
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;

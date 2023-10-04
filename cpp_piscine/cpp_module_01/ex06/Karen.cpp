@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:49:19 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:49:23 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Karen.hpp"
 
 Karen::Karen(void)
@@ -34,7 +46,6 @@ void	Karen::_error(void) const
 	std::cout << "This is unacceptable, I want to speak to the manager now." << std::endl;
 }
 
-//https://fr.wikibooks.org/wiki/Programmation_C-C%2B%2B/Pointeurs_et_r%C3%A9f%C3%A9rences_de_fonctions
 void    Karen::complain(std::string level) const
 {
     if (level != "INFO" && level != "DEBUG" && level != "WARNING" && level != "ERROR")

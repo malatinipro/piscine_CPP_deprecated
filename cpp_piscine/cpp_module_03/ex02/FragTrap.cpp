@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:14:55 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:15:00 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(): ClapTrap()
@@ -8,7 +20,6 @@ FragTrap::FragTrap(): ClapTrap()
 	this->_attack_damage = 30;
 }
 
-//Il suffit de passer la src dans le constructeur du parent
 FragTrap::FragTrap( const FragTrap & src ): ClapTrap(src)
 {
 	std::cout << "Copy constructor called" << std::endl;
@@ -33,7 +44,6 @@ FragTrap::~FragTrap()
     return ;
 }
 
-//On appelle symlement l'operateur d'assignation du parent puisqu'il n'y a rien a changer
 FragTrap &  FragTrap::operator=( FragTrap const & rhs )
 {
 	ClapTrap::operator=(rhs);

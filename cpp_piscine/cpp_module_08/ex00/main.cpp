@@ -1,12 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:58:31 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:58:52 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "easyfind.hpp"
-//#include <bits/stdc++.h>
 
 int main(void)
 {
-    std::cout << "Testing with a vector of type int" << std::endl;
-
     int arr[5] = {1, 2, 4, 6, 7};
-    //https://www.geeksforgeeks.org/initialize-a-vector-in-cpp-different-ways/
     int n = sizeof(arr) / sizeof(arr[0]);
     std::vector<int> my_vector(arr, arr + n);
     std::cout << "The vector stores the collection {1, 2, 4, 6, 7}" << std::endl;

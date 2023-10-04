@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:51:13 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:51:42 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <string>
 #include <filesystem>
@@ -10,18 +22,14 @@ std::string    replace(std::ifstream &in_file, std::ofstream &outstream, std::st
 
     (void)s2;
     bool first = true;
-    //On va lire ligne par ligne
     while (std::getline(in_file, str))
     {
         if (!first)
             outstream << std::endl;
         first = false;
-        //std::cout << "La ligne lue est: " << str << std::endl;
         found_pos = str.find(s1);
-        //Equivalent backslash 0
         while (found_pos != std::string::npos)
         {
-            //std::cout << "On doit faire le remplacement" << std::endl;
             str.erase(found_pos, s1.length());
             str.insert(found_pos, s2);
             found_pos = str.find(s1);
@@ -31,7 +39,6 @@ std::string    replace(std::ifstream &in_file, std::ofstream &outstream, std::st
     return (str);
 }
 
-//https://en.cppreference.com/w/cpp/io/basic_fstream
 int main(void)
 {
     std::string s1;
@@ -61,18 +68,13 @@ int main(void)
     }
     std::cout << std::endl;
     std::string file_to_open = "./" + filename;
-    /* Travailler sur des fichiers plutot que sur des sorties standards */
-    /*Lecture - creation d une instance de filestream file */
     std::ifstream in_file;
-    /* On pourra tester avec les autres fichiers */
     in_file.open(file_to_open);
-    //Check if the file exits, if it is corrupted etc 
     if (in_file.fail())
     {
         std::cerr << "Error opening file" << std::endl;
         return (1);
     }
-    /* Ecriture */
     std::string new_name = filename + ".replace";
     std::ofstream new_file(new_name);
 

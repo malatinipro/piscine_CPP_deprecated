@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:53:13 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:53:13 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HUMANA_HPP
 #define HUMANA_HPP
 
@@ -6,20 +18,14 @@
 
 class HumanA
 {
-public:
+    public:
+        HumanA(std::string name, Weapon &weapon);
+        ~HumanA(void);
+        void    attack(void);
 
-/* On ne peut pas faire un constructeur sans argument si on veut que la reference soit ok */
-    //HumanA();
-    HumanA(std::string name, Weapon &weapon);
-    ~HumanA(void);
-
-    void    attack(void);
-    //void    setWeapon(Weapon &type);
-
-private:
-    std::string _name;
-    /* Un pointeur peut etre null donc si on a pas forcement d'arme c'est qu'il faut un pointeur */
-    Weapon  &_weapon;
+    private:
+        std::string _name;
+        Weapon  &_weapon;
 };
 
 #endif

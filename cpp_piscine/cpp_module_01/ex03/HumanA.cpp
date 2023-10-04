@@ -1,18 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:53:18 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:53:36 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "HumanA.hpp"
 
-/* On est oblige de passer par une initialisation list pour que la reference ne pose pas de pb */
+//TODO: fix
 HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
-{   
+{
     return ;
 }
 
-/* Destructeur */
-HumanA::~HumanA(void) {
+HumanA::~HumanA(void)
+{
 	return ;
 }
 
 void    HumanA::attack(void)
 {
-    /* Ici on met un point et pas une fleche car il s agit d un pointeur */
     std::cout << _name << " attacks with his " << this->_weapon.getType() << std::endl;
 }

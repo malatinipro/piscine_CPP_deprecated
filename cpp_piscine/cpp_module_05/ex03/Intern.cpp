@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:29:51 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:30:34 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Intern.hpp"
 
+//TODO: fixme?
 Intern::Intern()
 {
 	std::cout << "Intern default constructor called" << std::endl;
@@ -16,7 +29,6 @@ Intern::Intern(Intern const & src)
 {
 	(void)src;
 	std::cout << "Intern copy constructor called" << std::endl;
-  //On ne peut rien copier puisqu'il n a aucun attribut
   return ;
 }
 
@@ -27,13 +39,9 @@ Intern & Intern::operator=(Intern const & rhs)
 	return *this;
 }
 
-//Pas le droit au if else if ou autre donv on va faire des tableaux
-//Attention a bien checker les leaks
 Form * Intern::makeForm(std::string name, std::string target)
 {
-  //Ecrit comme ca comme dans l'exemple du sujet
 	std::string forms[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-  //Creation des trois fichiers pour ne pas avoir de if a faire
 	Form * src[3] = {new ShrubberyCreationForm(target), new RobotomyRequestForm(target), new PresidentialPardonForm(target)};
 
   int i = 0;
@@ -49,7 +57,6 @@ Form * Intern::makeForm(std::string name, std::string target)
       break;
     }
     i++;
-    //checker si le forme name existe bien
   }
   i = 0;
   while (i < 3)
@@ -62,12 +69,11 @@ Form * Intern::makeForm(std::string name, std::string target)
   }
   if (check == -1)
   {
-		//Le form n a pas ete trouve
     throw std::runtime_error(std::string("Error. Form mentionned does not exist, the intern can not create it."));
   }
   if (check != -1)
   {
-	std::cout << "Inter creates " << name << std::endl;
+    std::cout << "Inter creates " << name << std::endl;
     return (src[check]);
   }
   return (NULL);

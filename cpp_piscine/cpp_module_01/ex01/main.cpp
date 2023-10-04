@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:55:35 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:55:59 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string>
 #include <iostream>
 #include <sstream>
 #include "./Zombie.hpp"
 
-/* Trouve sur stack overflow, verifier si une string est constituee de chiffres*/
 bool is_number(const std::string& s)
 {
     return( strspn( s.c_str(), "-.0123456789" ) == s.size() );
@@ -16,9 +27,6 @@ int main(void)
     std::stringstream   ss;
     int                 num;
     num = 0;
-
-    std::cout << "Let's create a horde of Zombies" << std::endl;
-    std::cout << "Enter the number of zombies you are looking for : ";
     std::getline(std::cin, number);
     std::cout << std::endl;
     int number_len;
@@ -33,12 +41,8 @@ int main(void)
         }
         i++;
     }
-    std::cout << "Great ! Now tell us the name for the horde: ";
     std::getline(std::cin, name);
-    std::cout << std::endl << "The horde will be constructed and destructed verbosely." << std::endl;
     int num_int = stoi(number);
-    //Allocation
     Zombie *horde = zombieHorde(num_int, name);
-    //Seule facon de free un tableau - Destruction
     delete [] horde;
 }

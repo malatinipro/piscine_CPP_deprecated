@@ -1,44 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:22:17 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:23:06 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
 Form::Form(void): _name("default_form"), _signed(false), _gexec(150), _gsign(150)
 {
-  std::cout << "Form default constructor called" << std::endl;
-  return ;
+	std::cout << "Form default constructor called" << std::endl;
+	return ;
 }
 
 Form::Form(const Form & src): _name(src._name), _signed(false), _gexec(src._gexec), _gsign(src._gsign)
 {
-  std::cout << "Form copy constructor constructor called" << std::endl;
-  return ;
+	std::cout << "Form copy constructor constructor called" << std::endl;
+	return ;
 }
 
 Form::Form(std::string name, int gexec, int gsign): _name(name), _signed(false), _gexec(gexec), _gsign(gsign)
 {
-  //Same constraints as Bureaucrat but we 2 member attributes
   std::cout << "Form constructor constructor called" << std::endl;
 	if (this->_gexec < 1 || this->_gsign < 1)
 		throw Form::GradeTooHighException();
 	if (this->_gexec > 150 || this->_gsign > 150)
 		throw Form::GradeTooLowException();
-  std::cout << "Form called" << this->getName() << std::endl;
-  std::cout << "Grade for signing : " << this->getGsign() << std::endl;
-  std::cout << "Grade for executing : " << this->getGexec() << std::endl;
-  std::cout << "Has been created successfully." << std::endl;
-  return ;
+	std::cout << "Form called" << this->getName() << std::endl;
+	std::cout << "Grade for signing : " << this->getGsign() << std::endl;
+	std::cout << "Grade for executing : " << this->getGexec() << std::endl;
+	std::cout << "Has been created successfully." << std::endl;
+	return ;
 }
 
 Form::~Form(void)
 {
-  std::cout << "Form deconstructor called" << std::endl;
-  return ;
+	std::cout << "Form deconstructor called" << std::endl;
+	return ;
 }
 
 Form &				Form::operator=(Form const & rhs)
 {
-  (void)rhs;
-  std::cout << "Form assignation operator called" << std::endl;
-  //std::cout << "Not viable because values are consts." << std::endl;
+	(void)rhs;
+	std::cout << "Form assignation operator called" << std::endl;
 	return *this;
 }
 

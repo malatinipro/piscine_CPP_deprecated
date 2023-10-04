@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/10/04 12:08:14 by mahautlatin       #+#    #+#              #
+#    Updated: 2023/10/04 12:08:15 by mahautlatin      ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME			=	ex02
 CC				=	clang++
-CFLAGS			=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 RM				=	rm -rf
 SRCS			=	./main.cpp ./Fixed.cpp
 
@@ -22,4 +34,4 @@ fclean			:	clean
 
 re				: 	fclean all
 
-.PHONY: 		all fclean clean re
+.PHONY: 			all fclean clean re

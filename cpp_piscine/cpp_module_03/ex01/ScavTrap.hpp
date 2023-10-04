@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:14:24 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:14:25 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
-//Ici on voit bien qu on herite publiquement de ClapTrap
 class ScavTrap: public ClapTrap
 {
     public:
@@ -12,10 +23,7 @@ class ScavTrap: public ClapTrap
 		~ScavTrap();
 
         ScavTrap &		operator=( ScavTrap const & rhs );
-        //overload de attack
 		void	        attack(std::string const & target);
-        //be repaired is inherited
-        //take damaged is inherited
 		void	        guardGuate(void);
 
     protected:

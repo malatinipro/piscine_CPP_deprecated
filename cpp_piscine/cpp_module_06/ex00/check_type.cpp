@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_type.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:34:16 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:35:10 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string>
 #include <iostream>
 
@@ -37,7 +49,6 @@ bool is_float(std::string const &str)
   if (!(str.compare("-inff")) || !(str.compare("+inff")) || !(str.compare("nanf")))
     return (true);
 
-  //check le point
   size_t dot_position = str.find('.');
   size_t dot_position_check = str.rfind('.');
   if (dot_position != dot_position_check)
@@ -45,7 +56,6 @@ bool is_float(std::string const &str)
   if (dot_position == len)
     return (false);
 
-  //check le f
   size_t f_position = str.find('f');
   size_t f_position_check = str.rfind('f');
   if (f_position != f_position_check)
@@ -53,12 +63,10 @@ bool is_float(std::string const &str)
   if (f_position != len)
     return (false);
 
-  //check le tiret
   size_t dash_position = str.find("-");
   if (dash_position != 0 && str[0] == '-')
     return (false);
 
-  //check le tout
   while (i < len)
   {
     if (!isprint(str[i]))
@@ -81,7 +89,6 @@ bool is_double(std::string const &str)
   if (!(str.compare("-inf")) || !(str.compare("+inf")) || !(str.compare("nan")))
     return (true);
 
-  //check le point
   size_t dot_position = str.find('.');
   size_t dot_position_check = str.rfind('.');
   if (dot_position != dot_position_check)
@@ -89,7 +96,6 @@ bool is_double(std::string const &str)
   if (dot_position == len)
     return (false);
 
-  //check le f
   size_t f_position = str.find('f');
   size_t f_position_check = str.rfind('f');
   if (f_position != f_position_check)
@@ -97,7 +103,6 @@ bool is_double(std::string const &str)
   if (f_position != len)
       return (false);
 
-  //check le tiret
   size_t dash_position = str.find("-");
   if (dash_position != 0 && str[0] == '-')
       return (false);
@@ -117,26 +122,14 @@ bool is_double(std::string const &str)
 int  check_type(std::string const &str)
 {
   if (is_char(str) == true)
-  {
-    //std::cout << "Is char returned true" << std::endl;
     return (1);
-  }
 
   else if (is_int(str) == true)
-  {
-    //std::cout << "Is int returned true" << std::endl;
     return (2);
-  }
+
   else if (is_float(str) == true)
-  {
-    //std::cout << "Is float returned true" << std::endl;
     return (3);
-  }
   else if (is_double(str) == true)
-  {
-    //std::cout << "Is double returned true" << std::endl;
     return (4);
-  }
-  //std::cout << "Error: incorrect type argument" << std::endl;
   return (0);
 }

@@ -1,16 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:42:33 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:42:42 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ITER_HPP
 #define ITER_HPP
 
 #include <iostream>
 
-//fonction pour tester le pointeur sur fonction avec n'importe quel type
 template<typename T>
 void my_test(T const &a)
 {
   std::cout << static_cast<T>(a + 1) << std::endl;
 }
 
-//Fonction demandee par le sujet
 template<typename T>
 void iter(T const *array, unsigned int const len, void(*f)(T const &arg))
 {

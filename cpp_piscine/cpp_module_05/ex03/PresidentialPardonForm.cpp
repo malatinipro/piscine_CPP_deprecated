@@ -1,41 +1,47 @@
-#include "PresidentialPardonForm.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:31:57 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:32:26 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "PresidentialPardonForm.hpp"
+//TODO: fixme ?
 PresidentialPardonForm::PresidentialPardonForm(): Form("PresidentialPardonForm", 5, 25, "default_target")
 {
-  //std::cout << "Presidential Pardon form constructor called" << std::endl;
   return ;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm & src): Form(src)
 {
-  //std::cout << "Presidential Pardon form copy constructor called" << std::endl;
   this->_target = src.getTarget();
   return ;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string const target): Form("PresidentialPardonForm", 5, 25, target)
 {
-  //std::cout << "Presidential Pardon form target constructor called " << std::endl;
   return ;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-  //std::cout << "Presidential Pardon form destructor called" << std::endl;
   return ;
 }
 
 PresidentialPardonForm &				PresidentialPardonForm::operator=(PresidentialPardonForm const & rhs)
 {
 	(void)rhs;
-  //std::cout << "Form assignation operator called" << std::endl;
 	return *this;
 }
 
 void	PresidentialPardonForm::execute(Bureaucrat const & executor)
 {
   (void)executor;
-  //std::cout << "Presidential Pardon Form execute" << std::endl;
   try
 	{
 		Form::execute(executor);

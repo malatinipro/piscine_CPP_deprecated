@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:05:12 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:05:13 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
@@ -11,8 +23,6 @@ public:
     Fixed(const float float_to_convert);
 	Fixed(Fixed const & src);
 	~Fixed(void);
-    //L'operateur d'assignation est binaire
-    //rhs = right hand side = ce que je souhaite assigner
 	Fixed & operator=(Fixed const &rhs);
 
 	int		getRawBits(void) const;

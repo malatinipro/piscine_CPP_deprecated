@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhonebookClass.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 19:21:53 by user42            #+#    #+#             */
-/*   Updated: 2021/10/14 11:31:16 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/04 12:02:26 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Phonebook::Phonebook(void)
     return ;
 }
 
-//Destructeur
 Phonebook::~Phonebook(void)
 {
     return ;

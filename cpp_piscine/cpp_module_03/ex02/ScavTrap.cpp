@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:17:55 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:18:13 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
-//Appel du constructeur du claptrap dans l'initilisation list
 ScavTrap::ScavTrap(): ClapTrap()
 {
     std::cout << "Default ScavTrap constructor is being called" << std::endl;
@@ -38,7 +49,6 @@ ScavTrap::~ScavTrap()
 
 ScavTrap &  ScavTrap::operator=( ScavTrap const & rhs )
 {
-    //Necessaire d appeler l'operateur sur le parent au prealable
 	ClapTrap::operator=(rhs);
 	this->_gate_keeper_mode = rhs._gate_keeper_mode;
 	std::cout<< "ScavTrap assignement operateur called" << std::endl;

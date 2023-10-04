@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ContactClass.cpp                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:00:36 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:01:04 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./ContactClass.hpp"
 #include <iomanip>
 #include <string>
@@ -12,40 +24,36 @@ Contact::Contact(void)
     return ;
 }
 
-//Destructeur
 Contact::~Contact(void)
 {
     return ;
 }
 
-std::string  Contact::getter_first_name(void)
+std::string Contact::getter_first_name(void)
 {
     return (this->_first_name);
 }
 
-std::string  Contact::getter_last_name(void)
+std::string Contact::getter_last_name(void)
 {
     return (this->_last_name);
 }
 
-std::string  Contact::getter_phone_number(void)
+std::string Contact::getter_phone_number(void)
 {
     return (this->_phone_number);
 }
 
-std::string  Contact::getter_nick_name(void)
+std::string Contact::getter_nick_name(void)
 {
     return (this->_nick_name);
 }
 
-std::string  Contact::getter_darkest_secret(void)
+std::string Contact::getter_darkest_secret(void)
 {
     return (this->_darkest_secret);
 }
 
-/*
-** Trouvé sur stackoverflow et légèremment modifiée
-*/
 std::string truncate(std::string str, size_t width, bool show_ellipsis=true)
 {
     if (str.length() > width)
@@ -58,9 +66,6 @@ std::string truncate(std::string str, size_t width, bool show_ellipsis=true)
     return str;
 }
 
-/*
-** Permet d'afficher les contacts disponibles
-*/
 void        Contact::display_all()
 {
   Contact *it;

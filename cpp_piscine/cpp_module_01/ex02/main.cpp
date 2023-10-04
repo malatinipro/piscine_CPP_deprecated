@@ -1,12 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:53:45 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:53:50 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string>
 #include <iostream>
 
-/* Cet exercice permet de nous exercer sur les strings */
 int main(void)
 {
     std::string str("HI THIS IS BRAIN");
     std::string *stringPTR = &str;
-    //Une reference est une sorte de pointeur toujours deferencee et jamais nulle
     std::string &stringREF = str;
 
     std::cout << "La valeur de string est : " << str << std::endl;

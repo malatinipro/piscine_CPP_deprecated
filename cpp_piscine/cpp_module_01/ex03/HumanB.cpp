@@ -1,12 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:52:49 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:52:50 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "HumanB.hpp"
 
-/* Constructeur avec argument et initialization list */
 HumanB::HumanB(std::string name) : _name(name)
 {
     return ;
 }
 
-/* Destructeur */
 HumanB::~HumanB(void) {
 	return ;
 }

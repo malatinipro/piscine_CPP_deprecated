@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:13:54 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:13:54 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
 {
-    //Rerise de l'ancien main
     std::cout << "----------- clap trap ----------" << std::endl;
     std::cout << "----------- CONSTRUCTION ----------" << std::endl;
     ClapTrap buddie("Buddie");
@@ -26,8 +37,7 @@ int main(void)
      buddie.beRepaired(20);
     buddie2.beRepaired(0);
     no_name.beRepaired(5);
-    //td::cout << "buddie2 is called " << buddie.getter_name() << std::endl;
-    //ligne pour tester l enfant ScavTrap
+
     std::cout << std::endl;
     std::cout << "----------- scav trap ----------" << std::endl;
     std::cout << "----------- CONSTRUCTION ----------" << std::endl;
@@ -35,7 +45,7 @@ int main(void)
     ScavTrap lola("Lola");
     ScavTrap lolo("Lolo");
     scav.setter_name("Lili");
-    //scav = lolo;
+
     std::cout << "----------- take damage ----------" << std::endl;
     lolo.takeDamage(20);
     scav.takeDamage(13);
@@ -50,5 +60,5 @@ int main(void)
     lola.guardGuate();
     std::cout << "----------- DESTRUCTION ----------" << std::endl;
     return (0);
-    
+
 }

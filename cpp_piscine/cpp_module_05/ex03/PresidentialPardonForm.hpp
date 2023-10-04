@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:32:33 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:32:34 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
@@ -9,13 +21,13 @@ class Form;
 
 class PresidentialPardonForm: public Form
 {
-public:
-  PresidentialPardonForm(void);
-  PresidentialPardonForm(PresidentialPardonForm const & src);
-  PresidentialPardonForm(const std::string target);
-  virtual ~PresidentialPardonForm(void);
-  PresidentialPardonForm &		operator=(PresidentialPardonForm const & rhs);
+  public:
+    PresidentialPardonForm(void);
+    PresidentialPardonForm(PresidentialPardonForm const & src);
+    PresidentialPardonForm(const std::string target);
+    virtual ~PresidentialPardonForm(void);
+    PresidentialPardonForm &		operator=(PresidentialPardonForm const & rhs);
 
-  virtual void    execute(Bureaucrat const & executor);
+    virtual void    execute(Bureaucrat const & executor);
 };
 #endif

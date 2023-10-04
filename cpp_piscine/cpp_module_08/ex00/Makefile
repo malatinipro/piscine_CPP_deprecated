@@ -1,6 +1,6 @@
 NAME			=	ex00
 CC				=	clang++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 RM				=	rm -rf
 SRCS			=	./main.cpp
 OBJS 			=	${SRCS:.cpp=.o}
@@ -21,4 +21,4 @@ fclean			:	clean
 
 re				: 	fclean all
 
-.PHONY: 		all fclean clean re
+.PHONY: 			all fclean clean re

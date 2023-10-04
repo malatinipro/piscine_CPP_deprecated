@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:12:57 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:13:24 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void): _name("null"), _hit_points(10), _energy_points(10), _attack_damage(0)
@@ -32,7 +44,6 @@ ClapTrap::~ClapTrap(void)
     return ;
 }
 
-//toujours retourner *this - reference sur this
 ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 {
     std::cout << "ClapTrap Assignation operator called" << std::endl;
@@ -43,11 +54,9 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
     return (*this);
 }
 
-//Message repris du sujet
 void    ClapTrap::attack(std::string const & target)
 {
-    //pas clair pour moi s'il faut les hit_points ou les arrack damages
-    std::cout << "ClapTrap " << this->_name << " attack " << target << " causing " << this->_attack_damage << " points of damage !" << std::endl; 
+    std::cout << "ClapTrap " << this->_name << " attack " << target << " causing " << this->_attack_damage << " points of damage !" << std::endl;
 }
 
 void    ClapTrap::setter_name(std::string name)
@@ -80,7 +89,6 @@ void    ClapTrap::takeDamage(unsigned int amount)
     return;
 }
 
-//A verifier dans la grille de correction
 void    ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_energy_points == 0)

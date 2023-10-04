@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:58:29 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:58:29 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef EASYFIND_HPP
  #define EASYFIND_HPP
 
@@ -12,14 +24,8 @@
  #include <map>
 
 template<typename T>
- //On veut retourner la premiere occurence du premier param dans le deuxieme
- //On cherche dans une "collection"
- //Il existe un algorithme qui fait ca pour nous et qui retourne une adresse
 std::vector<int>::iterator easyfind(T &a, int n)
 {
- //la fonction find fait partie de la librairie algorithm
- //Arguments classique de l'algorithme
- //https://www.youtube.com/watch?v=FUNs1pRJOso
    std::vector<int>::iterator it = std::find(a.begin(), a.end(), n);
    if (it == a.end())
    {

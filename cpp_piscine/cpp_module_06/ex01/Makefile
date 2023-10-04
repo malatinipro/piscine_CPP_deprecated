@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/10/04 12:38:03 by mahautlatin       #+#    #+#              #
+#    Updated: 2023/10/04 12:45:52 by mahautlatin      ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME			=	ex01
-CC				=	c++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
+CC				=	clang++
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 RM				=	rm -rf
 SRCS			=	./main.cpp ./DataClass.cpp
 OBJS 			=	${SRCS:.cpp=.o}
@@ -21,4 +33,4 @@ fclean			:	clean
 
 re				: 	fclean all
 
-.PHONY: 		all fclean clean re
+.PHONY: 			all fclean clean re

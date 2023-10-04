@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   DataClass.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:36:22 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:36:32 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "DataClass.hpp"
 
+//TODO: fixme
 Data::Data(void): _value(0)
 {
   std::cout << "Data default constructor called" << std::endl;

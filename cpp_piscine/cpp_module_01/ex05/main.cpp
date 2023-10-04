@@ -1,20 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:50:42 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:51:01 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./Karen.hpp"
 
 int main(void)
 {
-    Karen	kar;
+	Karen	kar;
 
-	std::cout << "--------------------------------------" << std::endl;
-    std::cout << "DEBUG" << std::endl;
 	kar.complain("DEBUG");
-	std::cout << "--------------------------------------" << std::endl;
-    std::cout << "INFO" << std::endl;
 	kar.complain("INFO");
-	std::cout << "--------------------------------------" << std::endl;
-    std::cout << "WARNING" << std::endl;
 	kar.complain("WARNING");
-	std::cout << "--------------------------------------" << std::endl;
-    std::cout << "ERROR" << std::endl;
 	kar.complain("ERROR");
 	return (0);
 }

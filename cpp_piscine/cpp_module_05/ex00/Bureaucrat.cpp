@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 12:19:13 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 12:19:20 by mahautlatin      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat(void): _name("Bureaucrat"), _grade(150)
@@ -34,8 +46,6 @@ Bureaucrat::~Bureaucrat(void)
 Bureaucrat &	Bureaucrat::operator=(Bureaucrat const & rhs)
 {
   std::cout << "Bureaucrat assignation operator called" << std::endl;
-  //The name can not be assigned as it is const
-  //this->_name = rhs._name;
   this->_grade = rhs._grade;
 	return *this;
 }

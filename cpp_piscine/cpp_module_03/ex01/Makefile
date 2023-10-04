@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/10/04 12:13:57 by mahautlatin       #+#    #+#              #
+#    Updated: 2023/10/04 12:14:00 by mahautlatin      ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME			=	ex01
 CC				=	clang++
-CFLAGS			=	-Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98
 RM				=	rm -rf
 SRCS			=	./main.cpp ./ClapTrap.cpp ./ScavTrap.cpp
 

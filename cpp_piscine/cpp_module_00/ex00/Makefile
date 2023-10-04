@@ -6,7 +6,7 @@
 #    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/06 18:25:37 by malatini          #+#    #+#              #
-#    Updated: 2023/10/04 12:03:16 by mahautlatin      ###   ########.fr        #
+#    Updated: 2023/10/04 18:23:19 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ fclean:		clean
 
 re:			fclean all
 
-test:		re
+test:		$(NAME)
 			./megaphone "shhhhh... I think the students are asleep..."
 			./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
 			./megaphone

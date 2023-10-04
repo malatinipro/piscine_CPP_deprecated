@@ -6,14 +6,14 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:23:37 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:24:16 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:28:55 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-std::ostream &			operator<<(std::ostream &COUT, Form const &rhs);
+std::ostream  &operator<<(std::ostream &COUT, Form const &rhs);
 
 int main(void)
 {

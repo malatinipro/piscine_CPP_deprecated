@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:05:30 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:07:17 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:44:30 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Fixed::Fixed(void): _fix_point(0)
 
 Fixed::Fixed(const Fixed &src)
 {
-	*this = src;
+    *this = src;
     return ;
 }
 
@@ -54,24 +54,25 @@ float Fixed::toFloat(void) const
 
 int Fixed::getRawBits(void) const
 {
-	return (this->_fix_point);
+    return (this->_fix_point);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	this->_fix_point = raw;
+    this->_fix_point = raw;
+    return ;
 }
 
 Fixed &Fixed::operator=(Fixed const &rhs)
 {
-	this->_fix_point = rhs.getRawBits();
-	return (*this);
+    this->_fix_point = rhs.getRawBits();
+    return (*this);
 }
 
-std::ostream & operator<<(std::ostream & COUT, Fixed const & rhs)
+std::ostream &operator<<(std::ostream &COUT, Fixed const &rhs)
 {
-	COUT << rhs.toFloat();
-	return (COUT);
+    COUT << rhs.toFloat();
+    return (COUT);
 }
 
 bool    Fixed::operator>(Fixed const &rhs) const
@@ -142,79 +143,71 @@ Fixed   Fixed::operator--(int)
     return (temp);
 }
 
-Fixed & Fixed::operator++(void)
+Fixed &Fixed::operator++(void)
 {
     this->_fix_point++;
     return (*this);
 }
 
-Fixed & Fixed::operator--(void)
+Fixed &Fixed::operator--(void)
 {
     this->_fix_point--;
     return (*this);
 }
 
-Fixed const &			Fixed::min(Fixed const & f1, Fixed const & f2)
+Fixed const &Fixed::min(Fixed const &f1, Fixed const &f2)
 {
     if (f1 < f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }
 
-Fixed const &		    Fixed::max(Fixed const & f1, Fixed const & f2)
+Fixed const &Fixed::max(Fixed const &f1, Fixed const &f2)
 {
     if (f1 > f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }
 
-Fixed &			Fixed::min(Fixed & f1, Fixed & f2)
+Fixed   &Fixed::min(Fixed & f1, Fixed & f2)
 {
     if (f1 < f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }
 
-Fixed &         Fixed::max(Fixed & f1, Fixed & f2)
+Fixed   &Fixed::max(Fixed & f1, Fixed & f2)
 {
     if (f1 > f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }
 
 /*Overloads des fonctions min et max*/
-Fixed const &	min(Fixed const & f1, Fixed const & f2)
+Fixed const &min(Fixed const & f1, Fixed const & f2)
 {
      if (f1 < f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }
 
-Fixed const &	max(Fixed const & f1, Fixed const & f2)
+Fixed const &max(Fixed const & f1, Fixed const & f2)
 {
      if (f1 > f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }
 
-Fixed &	min(Fixed & f1, Fixed & f2)
+Fixed &min(Fixed & f1, Fixed & f2)
 {
      if (f1 < f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }
 
-Fixed &	max(Fixed & f1, Fixed & f2)
+Fixed &max(Fixed & f1, Fixed & f2)
 {
      if (f1 > f2)
         return (f1);
-    else
-        return (f2);
+    return (f2);
 }

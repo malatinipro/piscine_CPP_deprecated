@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:00:36 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:01:04 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:18:18 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ std::string Contact::getter_darkest_secret(void)
     return (this->_darkest_secret);
 }
 
-std::string truncate(std::string str, size_t width, bool show_ellipsis=true)
+std::string truncate(std::string str, size_t width,
+    bool show_ellipsis = true)
 {
     if (str.length() > width)
     {
@@ -66,27 +67,30 @@ std::string truncate(std::string str, size_t width, bool show_ellipsis=true)
     return str;
 }
 
-void        Contact::display_all()
+void    Contact::display_all()
 {
   Contact *it;
   int i = 0;
 
-  std::cout << "|" << std::setw(10) << "index" << "|" << std::setw(10) << "firstname"
-    << "|" << std::setw(10) << "lastname" << "|" << std::setw(10) << "nickname" << "|" << std::endl;
+  std::cout << "|" << std::setw(10) << "index" << "|"
+    << std::setw(10) << "firstname" << "|" << std::setw(10)
+    << "lastname" << "|" << std::setw(10) << "nickname" << "|" << std::endl;
   while (i < 8)
   {
     it = this + i;
     if (it->_first_name.compare("null") != 0)
     {
-        std::cout << "|" << std::setw(10) << std::to_string(i) << "|" << std::setw(10) << truncate(it->_first_name, 9)
-        << "|" << std::setw(10) << truncate(it->_last_name, 9) << "|" << std::setw(10) << truncate(it->_nick_name, 9)
-        << "|" << std::endl;
+        std::cout << "|" << std::setw(10) << std::to_string(i) << "|"
+            << std::setw(10) << truncate(it->_first_name, 9) << "|"
+            << std::setw(10) << truncate(it->_last_name, 9) << "|"
+            << std::setw(10) << truncate(it->_nick_name, 9)
+            << "|" << std::endl;
     }
     i++;
   }
 }
 
-void        Contact::search_contact(int contact_number)
+void    Contact::search_contact(int contact_number)
 {
     (void)contact_number;
     std::string str;
@@ -117,7 +121,7 @@ void        Contact::search_contact(int contact_number)
     std::cout << "You typed an invalid index. Error." << std::endl;
 }
 
-int        Contact::setter_first_name(std::string first_name)
+int Contact::setter_first_name(std::string first_name)
 {
     if (first_name.length() > 0)
     {
@@ -131,7 +135,7 @@ int        Contact::setter_first_name(std::string first_name)
     }
 }
 
-int        Contact::setter_last_name(std::string last_name)
+int Contact::setter_last_name(std::string last_name)
 {
     if (last_name.length() > 0)
     {

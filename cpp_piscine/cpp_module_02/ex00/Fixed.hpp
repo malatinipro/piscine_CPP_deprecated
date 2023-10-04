@@ -6,29 +6,28 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:03:47 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:04:00 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:12:16 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
 # include <iostream>
 
-class Fixed {
-public:
-	Fixed(void);
-	Fixed(Fixed const & src);
-	~Fixed(void);
-	Fixed & operator=(Fixed const &f);
+class Fixed
+{
+	public:
+		Fixed(void);
+		Fixed(Fixed const & src);
+		~Fixed(void);
+		Fixed & operator=(Fixed const &f);
 
-	int		getRawBits(void) const;
-	void	setRawBits(int const raw);
+		int		getRawBits(void) const;
+		void	setRawBits(int const raw);
 
-private:
-	int 				_fix_point;
-	static const int	_fract_bits;
+	private:
+		int 				_fix_point;
+		static const int	_fract_bits;
 };
 
 std::ostream & operator<<(std::ostream & o, Fixed const & i);
-#endif

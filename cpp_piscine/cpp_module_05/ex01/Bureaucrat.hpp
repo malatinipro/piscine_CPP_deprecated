@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:22:09 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:22:10 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:02:09 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#pragma once
 
 # include "Form.hpp"
 # include <iostream>
@@ -24,14 +23,14 @@ class Bureaucrat
 {
   public:
     Bureaucrat(void);
-    Bureaucrat(Bureaucrat const & src);
+    Bureaucrat(Bureaucrat const &src);
     Bureaucrat(std::string const name, int grade);
     virtual ~Bureaucrat(void);
 
-    Bureaucrat &	   operator=(Bureaucrat const & rhs);
-    std::string	    getName(void) const;
-    int             getGrade(void) const;
-    void			      signForm(Form &form);
+    Bureaucrat        &operator=(Bureaucrat const &rhs);
+    std::string	      getName(void) const;
+    int               getGrade(void) const;
+    void			        signForm(Form &form);
 
   private:
     const std::string _name;
@@ -56,6 +55,4 @@ class Bureaucrat
   };
 };
 
-std::ostream &  operator<<( std::ostream &o, Bureaucrat const &rhs);
-
-#endif
+std::ostream  &operator<<( std::ostream &o, Bureaucrat const &rhs);

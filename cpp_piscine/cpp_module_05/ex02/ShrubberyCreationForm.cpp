@@ -6,48 +6,45 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:27:30 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:27:55 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:07:44 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(): Form("ShrubberyFormCreation", 137, 145, "Default_target")
+ShrubberyCreationForm::ShrubberyCreationForm():
+	Form("ShrubberyFormCreation", 137, 145, "Default_target")
 {
-  std::cout << "Shrubbery Creation Form constructor called" << std::endl;
-  return ;
+	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & src): Form(src)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src):
+	Form(src)
 {
-  std::cout << "Shrubbery Creation Form copy constructor called" << std::endl;
-  return ;
+	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string target): Form("ShrubberyCreationForm", 137, 145, target)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string target):
+	Form("ShrubberyCreationForm", 137, 145, target)
 {
-  std::cout << "Shrubbery Creation Form target constructor called" << std::endl;
-  return ;
+	return ;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)
 {
-  std::cout << "Shrubbery Creation Form destructor called" << std::endl;
-  return ;
+	return ;
 }
 
-ShrubberyCreationForm &				ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)
+ShrubberyCreationForm	&ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs)
 {
 	(void)rhs;
 	return *this;
 }
 
-void	ShrubberyCreationForm::execute(Bureaucrat const & executor)
+void	ShrubberyCreationForm::execute(Bureaucrat const &executor)
 {
-	(void)executor;
-	std::cout << "Shrubberry Creation Form execute invoked" << std::endl;
-	std::ofstream	output;
+	std::ofstream		output;
 	const std::string	name = this->_target + "_shrubbery";
 	try
 	{

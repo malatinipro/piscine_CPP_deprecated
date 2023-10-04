@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:34:16 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:35:10 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:23:48 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ bool is_float(std::string const &str)
   size_t i = 0;
   size_t len = str.length() - 1;
   (void)i;
-  if (!(str.compare("-inff")) || !(str.compare("+inff")) || !(str.compare("nanf")))
+  if (!(str.compare("-inff")) || !(str.compare("+inff"))
+    || !(str.compare("nanf")))
     return (true);
 
   size_t dot_position = str.find('.');
@@ -86,7 +87,8 @@ bool is_double(std::string const &str)
   size_t len = str.length() - 1;
   (void)i;
 
-  if (!(str.compare("-inf")) || !(str.compare("+inf")) || !(str.compare("nan")))
+  if (!(str.compare("-inf")) || !(str.compare("+inf"))
+      || !(str.compare("nan")))
     return (true);
 
   size_t dot_position = str.find('.');
@@ -110,7 +112,8 @@ bool is_double(std::string const &str)
   {
     if (!isprint(str[i]))
       return (false);
-    if (!isdigit(str[i]) && !(str[i] == '-') && !(str[i] == '.'))
+    if (!isdigit(str[i]) && !(str[i] == '-')
+        && !(str[i] == '.'))
       return (false);
     i++;
   }

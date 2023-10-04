@@ -6,7 +6,7 @@
 #    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 13:00:22 by mahautlatin       #+#    #+#              #
-#    Updated: 2023/10/04 13:00:23 by mahautlatin      ###   ########.fr        #
+#    Updated: 2023/10/04 19:25:26 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,5 +32,8 @@ fclean			:	clean
 					$(RM) $(NAME)
 
 re				: 	fclean all
+
+test			:	$(NAME)
+					./ex01
 
 .PHONY: 			all fclean clean re

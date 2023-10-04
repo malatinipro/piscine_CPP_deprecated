@@ -6,17 +6,16 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:23:12 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:23:34 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:03:06 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#pragma once
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
-#include "Bureaucrat.hpp"
+# include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
@@ -26,14 +25,14 @@ class Form
     Form(void);
     Form(Form const &src);
     Form(std::string name, int gexec, int gsign);
-    Form &				operator=(Form const &rhs);
+    Form  &operator=(Form const &rhs);
     virtual ~Form(void);
 
-    const std::string &	      getName(void) const;
-    const int &		            getGsign(void) const;
-    const int &		            getGexec(void) const;
-    bool				              isSigned(void) const;
-    void				              beSigned(Bureaucrat const & bur);
+    const std::string       &getName(void) const;
+    const int               &getGsign(void) const;
+    const int               &getGexec(void) const;
+    bool				            isSigned(void) const;
+    void				            beSigned(Bureaucrat const & bur);
 
   private:
     const std::string	      _name;
@@ -73,5 +72,3 @@ class Form
     }
 	};
 };
-
-#endif

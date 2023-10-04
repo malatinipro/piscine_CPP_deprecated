@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:25:10 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:26:26 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:32:23 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
-std::ostream &			operator<<(std::ostream &COUT, Form const &rhs);
+std::ostream  &operator<<(std::ostream &COUT, Form const &rhs);
 
 int main(void)
 {

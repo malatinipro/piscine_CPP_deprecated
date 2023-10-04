@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:21:32 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:21:38 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:01:40 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,40 @@
 
 Bureaucrat::Bureaucrat(void): _name("Bureaucrat"), _grade(150)
 {
-  std::cout << "Default Bureaucrat constructor called" << std::endl;
-  return ;
+	return ;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat & src): _name(src._name), _grade(src._grade)
-{
-  std::cout << "Bureaucrat copy constructor called" << std::endl;
-  return ;
+Bureaucrat::Bureaucrat(const Bureaucrat & src): _name(src._name),
+	_grade(src._grade)
+{;
+	return ;
 }
 
-Bureaucrat::Bureaucrat(std::string const name, int grade): _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(std::string const name, int grade): _name(name),
+	_grade(grade)
 {
-  std::cout << "Bureaucrat constructor called" << std::endl;
 	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-  std::cout << "Bureaucrat is called " << this->getName() << " and has grade " << this->getGrade() << std::endl;
-  return ;
+	std::cout << "Bureaucrat is called " << this->getName()
+		<< " and has grade " << this->getGrade() << std::endl;
+	return ;
 }
 
 Bureaucrat::~Bureaucrat(void)
 {
-  std::cout << "Bureaucrat desconstructor called" << std::endl;
-  return ;
+	std::cout << "Bureaucrat desconstructor called" << std::endl;
+	return ;
 }
 
-Bureaucrat &	Bureaucrat::operator=(Bureaucrat const & rhs)
+Bureaucrat	&Bureaucrat::operator=(Bureaucrat const & rhs)
 {
-  std::cout << "Bureaucrat assignation operator called" << std::endl;
-  this->_grade = rhs._grade;
+	this->_grade = rhs._grade;
 	return *this;
 }
 
-std::ostream &  operator<<(std::ostream &COUT, Bureaucrat const & rhs)
+std::ostream	&operator<<(std::ostream &COUT, Bureaucrat const & rhs)
 {
 	COUT << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
 	return COUT;
@@ -66,7 +65,8 @@ void	Bureaucrat::signForm(Form &form)
 		std::cerr << e.what() << std::endl;
 		return ;
 	}
-	std::cout << this->_name << " signes " << form.getName() << std::endl;
+	std::cout << this->_name << " signes " << form.getName()
+		<< std::endl;
 }
 
 std::string	Bureaucrat::getName(void) const

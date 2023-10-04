@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:50:01 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:50:09 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:09:15 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void    Karen::complain(std::string level) const
     if (level != "INFO" && level != "DEBUG" && level != "WARNING" && level != "ERROR")
 		return ;
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    /* Creation d'un tableau de fonctions */
     void(Karen::*f[4]) () const = {&Karen::_debug, &Karen::_info, &Karen::_warning, &Karen::_error};
     int i = 0;
     while (i < 4)

@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:27:20 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:27:27 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:07:39 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -25,11 +24,8 @@ class RobotomyRequestForm: public Form
     RobotomyRequestForm(void);
     RobotomyRequestForm(RobotomyRequestForm const &src);
     RobotomyRequestForm(std::string const target);
-
     virtual ~RobotomyRequestForm(void);
-    RobotomyRequestForm &		operator=(RobotomyRequestForm const & rhs);
+    RobotomyRequestForm &operator=(RobotomyRequestForm const &rhs);
 
-    virtual void    execute(Bureaucrat const & executor);
+    virtual void        execute(Bureaucrat const &executor);
 };
-
-#endif

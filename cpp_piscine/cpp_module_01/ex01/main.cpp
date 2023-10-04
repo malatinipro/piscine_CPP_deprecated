@@ -5,44 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:55:35 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:55:59 by mahautlatin      ###   ########.fr       */
+/*   Created: 2023/10/04 18:27:35 by mahautlatin       #+#    #+#             */
+/*   Updated: 2023/10/04 18:28:08 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <cstring>
 #include "./Zombie.hpp"
-
-bool is_number(const std::string& s)
-{
-    return( strspn( s.c_str(), "-.0123456789" ) == s.size() );
-}
 
 int main(void)
 {
-    std::string         number;
-    std::string         name;
-    std::stringstream   ss;
-    int                 num;
-    num = 0;
+    std::string number;
+    std::string name;
+    int num = 0;
+
+    std::cout << "Let's create a horde of Zombies" << std::endl;
+    std::cout << "Enter the number of zombies you are looking for : ";
     std::getline(std::cin, number);
-    std::cout << std::endl;
-    int number_len;
-    number_len = number.length();
-    int i = 0;
-    while (i < number_len)
+    std::stringstream ss(number);
+    ss >> num;
+
+    if (ss.fail())
     {
-        if (is_number(number)== false)
-        {
-            std::cout << "Number is incorrect. Retry next time." << std::endl;
-            return (1);
-        }
-        i++;
+        std::cout << "Error." << std::endl;
+        return (0);
     }
+    std::cout << std::endl;
+    std::cout << "Great ! Now tell us the name for the horde: ";
     std::getline(std::cin, name);
-    int num_int = stoi(number);
-    Zombie *horde = zombieHorde(num_int, name);
+    std::cout << std::endl << "The horde will be constructed and destructed verbosely." << std::endl;
+    Zombie *horde = zombieHorde(num, name);
     delete [] horde;
 }

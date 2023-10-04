@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:41:53 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:42:25 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 17:56:31 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#pragma once
 
 #include <iostream>
 
@@ -40,5 +39,3 @@ T const &max(T const &one, T const &second)
     return (one);
   return (second);
 }
-
-#endif

@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:35:16 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:36:02 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:23:56 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ void display_char(std::string const &str)
 
 bool display_int(std::string const &str)
 {
-	long long	l = strtol(str.data(), NULL, 10);
-	int			i = 0;
+	int	i = 0;
 
-  (void)l;
 	i = atoi(str.data());
 	if (i > CHAR_MAX || i < CHAR_MIN)
 		std::cout << "char: Non displayable" << std::endl;
@@ -51,30 +49,28 @@ bool display_int(std::string const &str)
 	return (true);
 }
 
-bool	display_float(std::string const & str)
+bool	display_float(std::string const &str)
 {
   const std::string s1 = "nanf";
   const std::string s2 = "+inff";
   const std::string s3 = "-inff";
+
+  float	f = atof(str.data());
 
   if (str == s1 || str == s2 || str == s3)
   {
     std::cout << "char: impossible" << std::endl;
     std::cout << "int: impossible" << std::endl;
     std::cout << "float: " << str << std::endl;
-    std::cout << "double: " << str.substr(0, str.length() - 1) << std::endl;
+    std::cout << "double: " << str.substr(0, str.length() - 1)
+      << std::endl;
     return (true);
   }
-	double	d = strtod(str.data(), NULL);
-	float	f;
-	(void)d;
 	if (errno == ERANGE)
 	{
 		std::cerr << "Error: invalid value" << std::endl;
 		return (false);
 	}
-
-	f = atof(str.data());
 	if (static_cast<int>(f) > CHAR_MAX || static_cast<int>(f) < CHAR_MIN)
 		std::cout << "char: Non displayable" << std::endl;
   else if (!isprint(static_cast<char>(f)))
@@ -166,8 +162,6 @@ bool  convert_to_types(std::string const &str)
     return (true);
   }
   else
-  {
     std::cout << "Error. Bad argument" << std::endl;
-  }
   return (false);
 }

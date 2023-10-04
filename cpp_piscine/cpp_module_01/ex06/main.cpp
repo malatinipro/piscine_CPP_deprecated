@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:49:50 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:49:50 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:10:39 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ int main(int argc, char **argv)
     (void)argv;
     Karen kar;
     if (argc != 2)
-    {
         return (0);
-    }
+
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int index = -1;
 	for (int i = 0; i < 4; i++)

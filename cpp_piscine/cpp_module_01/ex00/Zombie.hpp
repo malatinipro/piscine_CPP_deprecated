@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:56:18 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:56:22 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:05:02 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#pragma once
 
 #include <iostream>
 #include <sstream>
@@ -32,8 +31,5 @@ class Zombie
         std::string _name;
 };
 
-
 void    randomChump(std::string name);
 Zombie  *newZombie(std::string name);
-
-#endif

@@ -6,14 +6,13 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:12:41 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:12:42 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:17:54 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#pragma once
 
-#include <iostream>
+# include <iostream>
 
 class ClapTrap
 {
@@ -37,4 +36,3 @@ class ClapTrap
         unsigned int        _energy_points;
         unsigned int        _attack_damage;
 };
-#endif

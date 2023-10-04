@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:05:20 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:05:20 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:13:58 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 #include <iostream>
 
-int main(void) {
+int main(void)
+{
     Fixed a;
     Fixed const b(10);
     Fixed const c(42.42f);

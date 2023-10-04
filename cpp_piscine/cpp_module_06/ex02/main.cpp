@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:38:07 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:40:24 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 17:55:45 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <stdlib.h>
 #include <ctime>
 
-class Base {
+class Base
+{
 	public:
 		virtual ~Base(){}
 };

@@ -6,12 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:19:22 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:20:33 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 19:01:04 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#pragma once
 
 # include <iostream>
 # include <string>
@@ -21,20 +20,20 @@ class Bureaucrat
 {
   public:
     Bureaucrat(void);
-    Bureaucrat(Bureaucrat const & src);
+    Bureaucrat(Bureaucrat const &src);
     Bureaucrat(std::string const name, int grade);
     virtual ~Bureaucrat(void);
 
-    Bureaucrat &	operator=(Bureaucrat const & rhs);
+    Bureaucrat  &operator=(Bureaucrat const &rhs);
     const std::string	getName(void) const;
     int               getGrade(void) const;
 
-    void			incGrade(void);
-    void			decGrade(void);
+    void              incGrade(void);
+    void              decGrade(void);
 
   private:
     const std::string _name;
-    int         _grade;
+    int               _grade;
 
   class GradeTooHighException: public std::exception
   {
@@ -55,6 +54,4 @@ class Bureaucrat
   };
 };
 
-std::ostream & operator<<( std::ostream &o, Bureaucrat const &rhs);
-
-#endif
+std::ostream  &operator<<( std::ostream &o, Bureaucrat const &rhs);

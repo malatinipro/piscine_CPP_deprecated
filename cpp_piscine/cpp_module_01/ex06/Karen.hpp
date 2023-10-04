@@ -6,15 +6,14 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:49:28 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:49:46 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:10:19 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-#define KAREN_HPP
+#pragma once
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
 class Karen
 {
@@ -30,4 +29,3 @@ class Karen
         void _warning(void) const;
         void _error(void) const;
 };
-#endif

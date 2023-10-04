@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:52:49 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:52:50 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 15:07:33 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ HumanB::HumanB(std::string name) : _name(name)
     return ;
 }
 
-HumanB::~HumanB(void) {
-	return ;
+HumanB::~HumanB(void)
+{
+    return ;
 }
 
 void    HumanB::attack(void)

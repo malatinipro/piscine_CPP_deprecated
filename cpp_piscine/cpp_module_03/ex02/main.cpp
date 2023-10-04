@@ -6,7 +6,7 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 12:15:56 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/04 12:17:41 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/04 18:38:20 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,6 @@ int main(void)
 
     ClapTrap c("Clap");
     FragTrap frag;
-
-    FragTrap lola("Lola");
-    FragTrap lolo("Lolo");
 
     frag.setter_name("Lili");
     lolo.attack("un chat");
